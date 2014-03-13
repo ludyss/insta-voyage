@@ -1,0 +1,72 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Stylesheets importations
+===========================================================*/
+@import 'vendor/bootstrap.min.css';
+@import 'vendor/font-awesome.min.css';
+@import 'vendor/jquery-ui.css';
+
+/* Horizontal Scrolling
+===========================================================*/
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    width: 8000px;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+body > section {
+    vertical-align:top;
+    display: inline-block;
+    padding-top: 40px;
+    min-width: 800px;
+    height: 100%;
+}
+
+/* Navbar
+===========================================================*/
+.navbar {
+    min-height: 40px;
+    border: none;
+    background: none;
+    color: #000;
+}
+
+.navbar-brand {
+    padding: 10px;
+    height: 40px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Wells
+===========================================================*/
+.well {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+/* Form elements
+===========================================================*/
+.form-inline .control-label {
+    display: block;
+}
+
+.form-inline .form-control {
+    width: 100%;
+}
