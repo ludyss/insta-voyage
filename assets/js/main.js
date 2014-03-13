@@ -20,11 +20,17 @@ jQuery(document).ready(function($) {
     /*! 
      * Horizontal scrolling
      */
-    $(function() {
-        $("body").mousewheel(function(event, delta) {
-            this.scrollLeft -= (delta * 50);
-            event.preventDefault();
-        });
+    $("html, body").mousewheel(function(event, delta) {
+        this.scrollLeft -= (delta * 50);
+    });
+    ;
+
+    /*! 
+     * Aside toggle
+     */
+    $('.toggle-aside').click(function(event) {
+        $('aside').toggleClass('open');
+        event.preventDefault();
     });
 
     /*! 
@@ -33,7 +39,7 @@ jQuery(document).ready(function($) {
     $('a').click(function(event) {
         var target = $(this).attr('href');
         if (target[0] === '#') {
-            $("body").stop().animate({
+            $("html, body").stop().animate({
                 scrollLeft: $(target).offset().left
             }, 300);
             event.preventDefault();

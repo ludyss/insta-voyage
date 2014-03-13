@@ -53,6 +53,22 @@ body > section {
     padding-bottom: 10px;
 }
 
+/* Aside
+===========================================================*/
+aside {
+    padding-top: 40px;
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    transition: width ease-out .3s;
+    -webkit-transition: width ease-out .3s;
+    -moz-transition: width ease-out .3s;
+}
+
+aside.open{
+    width: 200px;
+}
+
 /* Wells
 ===========================================================*/
 .well {
@@ -69,4 +85,38 @@ body > section {
 
 .form-inline .form-control {
     width: 100%;
+}
+
+/* JQuery ui sliders
+===========================================================*/
+.ui-slider-horizontal {
+    height: 20px;
+    margin: 10px 0;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 0;
+    height: 20px;
+    cursor: move;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    cursor: move;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: none;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: 0; 
+    margin-left: -10px; 
+}
+
+.ui-widget-content {
+    border: none;
 }
