@@ -22,15 +22,13 @@ jQuery(document).ready(function($) {
      */
     $("html, body").mousewheel(function(event, delta) {
         this.scrollLeft -= (delta * 50);
-        
-        alert(this.scrollLeft);
     });
 
     /*! 
      * Aside toggle
      */
     $('.toggle-sidebar').click(function(event) {
-        $('aside').toggleClass('open');
+        $('#sidebar').toggleClass('open');
         event.preventDefault();
     });
 

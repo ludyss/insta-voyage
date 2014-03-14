@@ -36,6 +36,17 @@ body > section {
     height: 100%;
 }
 
+/* Section theming
+===========================================================*/
+#accueil {
+    background: url('../img/04.jpg') center center no-repeat;
+    background-size: 100%;
+}
+
+#accueil h2 {
+    color: #fff;
+}
+
 /* Navbar
 ===========================================================*/
 .navbar {
@@ -46,6 +57,8 @@ body > section {
 }
 
 .navbar-brand {
+    width: 200px;
+    text-align: center;
     padding: 10px;
     height: 40px;
 }
@@ -55,7 +68,7 @@ body > section {
     padding-bottom: 10px;
 }
 
-/* Aside
+/* Sidebar
 ===========================================================*/
 #sidebar {
     position: relative;
