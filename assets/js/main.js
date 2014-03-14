@@ -1,8 +1,8 @@
 
 jQuery(document).ready(function($) {
 
-    var windowWidth = $(window).width(); //retrieve current window width
-    var windowHeight = $(window).height(); //retrieve current window height
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
 
     /*! 
      * Full screen section
@@ -22,13 +22,14 @@ jQuery(document).ready(function($) {
      */
     $("html, body").mousewheel(function(event, delta) {
         this.scrollLeft -= (delta * 50);
+        
+        alert(this.scrollLeft);
     });
-    ;
 
     /*! 
      * Aside toggle
      */
-    $('.toggle-aside').click(function(event) {
+    $('.toggle-sidebar').click(function(event) {
         $('aside').toggleClass('open');
         event.preventDefault();
     });
@@ -52,7 +53,6 @@ jQuery(document).ready(function($) {
         max: 3000,
         values: [200, 1200],
         slide: function(event, ui) {
-            alert(ui.values);
         }
     });
 
