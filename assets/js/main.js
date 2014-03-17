@@ -20,8 +20,11 @@ jQuery(document).ready(function($) {
     /*! 
      * Horizontal scrolling
      */
-    $("html, body").mousewheel(function(event, delta) {
+    $('html, body').mousewheel(function(event, delta) {
         this.scrollLeft -= (delta * 50);
+        if(delta < 0){
+            $('#sidebar').removeClass('open');
+        }
     });
 
     /*! 
@@ -38,7 +41,7 @@ jQuery(document).ready(function($) {
     $('a').click(function(event) {
         var target = $(this).attr('href');
         if (target[0] === '#') {
-            $("html, body").stop().animate({
+            $('html, body').stop().animate({
                 scrollLeft: $(target).offset().left
             }, 300);
             event.preventDefault();
