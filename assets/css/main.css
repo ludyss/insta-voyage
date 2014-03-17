@@ -10,6 +10,8 @@
 @import 'vendor/font-awesome.min.css';
 @import 'vendor/jquery-ui.css';
 
+/*@import url(http://fonts.googleapis.com/css?family=Volkhov:700italic);*/
+
 /* Horizontal Scrolling
 ===========================================================*/
 html {
@@ -26,6 +28,33 @@ body {
     overflow-y: hidden;
 }
 
+h1,h2,h3,h4,h5,h6{
+    color: #00a6e4;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.well > h1,
+.well > h2,
+.well > h3,
+.well > h4,
+.well > h5,
+.well > h6,
+.title-header{
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #00a6e4;
+}
+
+#accueil h2 {
+    color: #fff;
+    font-family: 'Volkhov', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 body > section {
     position: relative;
     z-index: 500;
@@ -36,15 +65,29 @@ body > section {
     height: 100%;
 }
 
-/* Section theming
-===========================================================*/
-#accueil {
-    background: url('../img/04.jpg') center center no-repeat;
-    background-size: 100%;
+section > video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
 }
 
-#accueil h2 {
-    color: #fff;
+/* Spacers
+===========================================================*/
+.spacer {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+}
+.spacer.spacer-thin {
+    height: 8px;
+}
+
+.spacer.spacer-wide {
+    height: 32px;
 }
 
 /* Navbar
@@ -52,25 +95,26 @@ body > section {
 .navbar {
     min-height: 40px;
     border: none;
-    background: #23538a;
-    background: -moz-linear-gradient(top, #23538a 0%, #31708f 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#23538a), color-stop(100%,#31708f));
-    background: -webkit-linear-gradient(top, #23538a 0%,#31708f 100%);
-    background: -o-linear-gradient(top, #23538a 0%,#31708f 100%);
-    background: -ms-linear-gradient(top, #23538a 0%,#31708f 100%);
-    background: linear-gradient(to bottom, #23538a 0%,#31708f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#31708f',GradientType=0 );
 }
 
-.navbar-brand {
+.navbar-default  {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
     width: 200px;
     text-align: center;
     padding: 10px;
     height: 40px;
+    font-family: 'Volkhov', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
 }
 
-.navbar-nav {
-    width: auto;
+.navbar-default .navbar-brand.active {
+    color: #428BCA;
 }
 
 .navbar-nav > li > a {
@@ -78,22 +122,16 @@ body > section {
     padding-bottom: 10px;
 }
 
-.navbar-default .navbar-nav>li>a {
-    color:  #fff;
+.navbar-default .navbar-nav > li > a {
+    font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
-    color: #fff;
+#accueil .well {
+    background-color: #fff;
+    border: none;
 }
 
-.navbar-default .navbar-nav>li.active>a,
-.navbar-default .navbar-nav>li.active>a:focus {
-    background-color: #23538a;
-    color: #fff;
-}
-
-/* Sidebar
+/* Aside
 ===========================================================*/
 #sidebar {
     position: relative;
@@ -109,6 +147,9 @@ body > section {
     -webkit-transition: width ease-in-out .2s;
     -moz-transition: width ease-in-out .2s;
     box-shadow: 3px 0 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #sidebar.open{
@@ -117,11 +158,6 @@ body > section {
 
 /* Wells
 ===========================================================*/
-.well {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
 
 /* Form elements
 ===========================================================*/
@@ -133,36 +169,119 @@ body > section {
     width: 100%;
 }
 
+.btn, .form-control {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
 /* JQuery ui sliders
 ===========================================================*/
 .ui-slider-horizontal {
-    height: 20px;
+    height: 1em;
     margin: 10px 0;
 }
 
 .ui-slider .ui-slider-handle {
-    width: 0;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #428BCA;
     cursor: move;
 }
 
-.ui-slider .ui-slider-handle {
-    width: 20px;
-    height: 20px;
-    cursor: move;
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
-    border: none;
+.ui-slider-horizontal .ui-slider-range {
+    background-color: #c4e3f3;
 }
 
 .ui-slider-horizontal .ui-slider-handle {
-    top: 0; 
+    top: -5px; 
     margin-left: -10px; 
 }
 
 .ui-widget-content {
-    border: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.price{
+    color: #428BCA;
+    font-weight: bolder;
+}
+
+/*
+===========================================================*/
+.screen > .container {
+    position: relative;
+    top: 50%;
+    margin-top: -180px;
+    border-bottom-color: #E3E3E3;
+}
+
+/* Thumbnails
+===========================================================*/
+.thumbnail {
+    min-height: 300px;
+    position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.caption > p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbnail:before, .thumbnail:after {
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+/* sejours
+===========================================================*/
+#sejours {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Lang-bar
+===========================================================*/
+#lang-bar {
+    position: relative;
+    z-index: 1001;
+    height: 0px;
+    background-color: #fff;
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    transition: height ease-out .2s;
+    -webkit-transition: height ease-in-out .2s;
+    -moz-transition: height ease-in-out .2s;
+    box-shadow: 3px 0 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#lang-bar.open {
+    height: 80px;
+}
+#lang-bar > menu {
+    margin-top: 40px;
 }

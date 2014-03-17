@@ -9,6 +9,18 @@ jQuery(document).ready(function($) {
      */
     $('.screen').width(windowWidth)
             .height(windowHeight);
+ 
+    if(windowHeight > windowWidth) {
+        $('section > video').css({
+            'width' : 'auto',
+            'height' : '100%'
+        });
+    } else {
+        $('section > video').css({
+            'width' : '100%',
+            'height' : 'auto'
+        });
+    }
 
     /*! 
      * Handle viewport resizing
@@ -20,11 +32,8 @@ jQuery(document).ready(function($) {
     /*! 
      * Horizontal scrolling
      */
-    $('html, body').mousewheel(function(event, delta) {
-        this.scrollLeft -= (delta * 50);
-        if(delta < 0){
-            $('#sidebar').removeClass('open');
-        }
+    $("html, body").mousewheel(function(event, delta) {
+        this.scrollLeft -= (delta * 30);
     });
 
     /*! 
@@ -32,6 +41,12 @@ jQuery(document).ready(function($) {
      */
     $('.toggle-sidebar').click(function(event) {
         $('#sidebar').toggleClass('open');
+        $('.navbar-brand').toggleClass('active');
+        event.preventDefault();
+    });
+    
+    $('.toggle-lang-bar').click(function(event) {
+        $('#lang-bar').toggleClass('open');
         event.preventDefault();
     });
 
@@ -41,7 +56,7 @@ jQuery(document).ready(function($) {
     $('a').click(function(event) {
         var target = $(this).attr('href');
         if (target[0] === '#') {
-            $('html, body').stop().animate({
+            $("html, body").stop().animate({
                 scrollLeft: $(target).offset().left
             }, 300);
             event.preventDefault();
@@ -54,7 +69,11 @@ jQuery(document).ready(function($) {
         max: 3000,
         values: [200, 1200],
         slide: function(event, ui) {
+            $( "#lower-price" ).html(ui.values[ 0 ] + " €");
+            $( "#high-price" ).html(ui.values[ 1 ] + " €");
         }
     });
-
+    
+    $( "#lower-price" ).html($( "#budget-slider" ).slider( "values", 0 ) + " €");
+    $( "#high-price" ).html($( "#budget-slider" ).slider( "values", 1 ) + " €");
 });
