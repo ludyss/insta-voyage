@@ -21,7 +21,9 @@ jQuery(document).ready(function($) {
      * Horizontal scrolling
      */
     $("html, body").mousewheel(function(event, delta) {
-        this.scrollLeft -= (delta * 50);
+        this.scrollLeft -= (delta * 25);
+        
+        //alert(this.scrollLeft);
     });
 
     /*! 
@@ -29,6 +31,10 @@ jQuery(document).ready(function($) {
      */
     $('.toggle-sidebar').click(function(event) {
         $('#sidebar').toggleClass('open');
+        event.preventDefault();
+    });
+    $('.toggle-lang-bar').click(function(event) {
+        $('#lang-bar').toggleClass('open');
         event.preventDefault();
     });
 
@@ -51,7 +57,10 @@ jQuery(document).ready(function($) {
         max: 3000,
         values: [200, 1200],
         slide: function(event, ui) {
+            $( "#lower-price" ).html(ui.values[ 0 ] + " €");
+            $( "#high-price" ).html(ui.values[ 1 ] + " €");
         }
     });
-
+    $( "#lower-price" ).html($( "#budget-slider" ).slider( "values", 0 ) + " €");
+    $( "#high-price" ).html($( "#budget-slider" ).slider( "values", 1 ) + " €");
 });

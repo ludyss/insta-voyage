@@ -25,7 +25,20 @@ body {
     overflow-x: visible;
     overflow-y: hidden;
 }
-
+h1,h2,h3,h4,h5,h6{
+    color: #00a6e4;
+}
+.well > h1,
+.well > h2,
+.well > h3,
+.well > h4,
+.well > h5,
+.well > h6,
+.title-header{
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #00a6e4;
+}
 body > section {
     position: relative;
     z-index: 500;
@@ -53,7 +66,8 @@ body > section {
     min-height: 40px;
     border: none;
     color: #000;
-    background: rgba(255,255,255,.8);
+    /*background: rgba(255,255,255,.8);*/
+    background: rgba(0,101,139,.6);
 }
 
 .navbar-brand {
@@ -68,7 +82,11 @@ body > section {
     padding-bottom: 10px;
 }
 
-/* Sidebar
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+    color: #e89054;
+    font-weight: bolder;
+}
+/* Aside
 ===========================================================*/
 #sidebar {
     position: relative;
@@ -84,6 +102,9 @@ body > section {
     -webkit-transition: width ease-in-out .2s;
     -moz-transition: width ease-in-out .2s;
     box-shadow: 3px 0 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #sidebar.open{
@@ -107,7 +128,11 @@ body > section {
 .form-inline .form-control {
     width: 100%;
 }
-
+.btn, .form-control {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -o-border-radius: 0px;
+}
 /* JQuery ui sliders
 ===========================================================*/
 .ui-slider-horizontal {
@@ -135,9 +160,110 @@ body > section {
 
 .ui-slider-horizontal .ui-slider-handle {
     top: 0; 
-    margin-left: -10px; 
+    margin-left: -10px;
+    background-color: #ec9154;
+    border: 1px solid #6d2c00;
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#ededed;
+    border:1px solid #dcdcdc;
 }
 
+.ui-slider-range {
+    background-color: #e89054;
+}
 .ui-widget-content {
     border: none;
+}
+.price{
+    color: #e89054;
+    font-weight: bolder;
+}
+
+/* Search area style
+===========================================================*/
+.screen{
+    background-color: #84759C;
+    background-image: url('../img/09.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+.screen > .container {
+    margin-top: 7%;
+    border-bottom-color: #E3E3E3;
+}
+
+/* Tumbnail
+===========================================================*/
+.thumbnail
+{
+    min-height: 300px;
+    position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.caption > p
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbnail:before, .thumbnail:after
+{
+    content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+/* sejours
+===========================================================*/
+#sejours{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* Lang
+===========================================================*/
+#lang-bar {
+    position: relative;
+    z-index: 1001;
+    height: 0px;
+    background-color: #fff;
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    transition: height ease-out .2s;
+    -webkit-transition: height ease-in-out .2s;
+    -moz-transition: height ease-in-out .2s;
+    box-shadow: 3px 0 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#lang-bar.open{
+    height: 80px;
+}
+#lang-bar > menu{
+    margin-top: 40px;
 }
