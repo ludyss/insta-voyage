@@ -160,8 +160,8 @@ class Router
      */
     protected function callRoute(Route $route)
     {
-        $controller_name = $route->getController();
-        $action_name = $route->getAction();
+        $controller_name = $route->getController() . 'Controller';
+        $action_name = $route->getAction() . 'Action';
 
         if (file_exists('./controller/' . $controller_name . '.php')) {
             require_once './controller/' . $controller_name . '.php';
