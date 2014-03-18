@@ -10,7 +10,7 @@
 @import 'vendor/font-awesome.min.css';
 @import 'vendor/jquery-ui.css';
 
-/*@import url(http://fonts.googleapis.com/css?family=Volkhov:700italic);*/
+@import url(http://fonts.googleapis.com/css?family=Volkhov:700italic);
 
 /* Horizontal Scrolling
 ===========================================================*/
@@ -52,14 +52,21 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     font-family: 'Volkhov', serif;
     font-weight: 700;
+    font-size: 1.5em;
     font-style: italic;
+}
+
+#accueil .well {
+    background-color: rgba(255,255,255,.9);
+    border: none;
 }
 
 body > section {
     position: relative;
+    float: left;
     z-index: 500;
     vertical-align:top;
-    display: inline-block;
+    display: block;
     padding-top: 50px;
     min-width: 800px;
     height: 100%;
@@ -71,6 +78,14 @@ section > video {
     bottom: 0;
     width: 100%;
     height: auto;
+}
+
+section > video:focus {
+    outline: none;
+}
+
+section:not(#accueil) {
+    border-top: 40px solid rgba(30,30,30,.4);
 }
 
 /* Spacers
@@ -93,42 +108,42 @@ section > video {
 /* Navbar
 ===========================================================*/
 .navbar {
-    min-height: 40px;
+    min-height: 20px;
     border: none;
 }
 
+.navbar-brand {
+    padding: 8px;
+    font-size: 18px;
+    height: auto;
+}
+
 .navbar-default  {
-    background-color: #fff;
+    background-color: #3276B1;
+    border-bottom: 1px solid #b4bcff;
 }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    height: 40px;
     font-family: 'Volkhov', serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 2em;
-}
-
-.navbar-default .navbar-brand.active {
-    color: #428BCA;
+    color: #fff;
 }
 
 .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .navbar-default .navbar-nav > li > a {
-    font-weight: bold;
+    font-size: .9em;
+    font-family: Arial;
+    color: #fff;
 }
-
-#accueil .well {
-    background-color: #fff;
-    border: none;
+.navbar-default .navbar-nav > li.active > a {
+    color: #fff;
+    background-color: #00a6e4;
 }
 
 /* Aside
@@ -215,7 +230,7 @@ section > video {
 .screen > .container {
     position: relative;
     top: 50%;
-    margin-top: -180px;
+    margin-top: -50px;
     border-bottom-color: #E3E3E3;
 }
 

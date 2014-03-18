@@ -9,6 +9,7 @@
         <title>Voyages</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"> 
         <link rel="stylesheet" href="assets/css/main.css">
         <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -25,7 +26,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
-                <a class="navbar-brand toggle-sidebar" href="#">CrossIsland</a>
+                <a class="navbar-brand toggle-sidebar" href="#">Cross<span>Island</span></a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -89,7 +90,7 @@
                                     </div>
 
                                     <div class="form-group col-md-2">
-                                        <button type="submit" class="btn btn-block btn-warning">Trouver</button>
+                                        <button type="submit" class="btn btn-block btn-primary">Trouver</button>
                                     </div>
                                 </div>
                             </div>
