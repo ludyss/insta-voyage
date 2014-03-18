@@ -150,6 +150,9 @@
                         <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
                     </div>
                 </div>
+                <div class="thumb">
+                    MORE
+                </div>
             </div>
         </section>
 

@@ -10,6 +10,9 @@ jQuery(document).ready(function($) {
     $('.screen').width(windowWidth)
             .height(windowHeight);
     
+    var thumbs = $('#sejours .thumbs-rail .thumb');
+    $('#sejours').width($(thumbs[0]).innerWidth() * thumbs.length);
+    
     if(windowHeight > windowWidth) {
         $('section > video').css({
             'width' : 'auto',
