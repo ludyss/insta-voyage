@@ -9,6 +9,18 @@ jQuery(document).ready(function($) {
      */
     $('.screen').width(windowWidth)
             .height(windowHeight);
+ 
+    if(windowHeight > windowWidth) {
+        $('section > video').css({
+            'width' : 'auto',
+            'height' : '100%'
+        });
+    } else {
+        $('section > video').css({
+            'width' : '100%',
+            'height' : 'auto'
+        });
+    }
 
     /*! 
      * Handle viewport resizing
@@ -21,9 +33,7 @@ jQuery(document).ready(function($) {
      * Horizontal scrolling
      */
     $("html, body").mousewheel(function(event, delta) {
-        this.scrollLeft -= (delta * 25);
-        
-        //alert(this.scrollLeft);
+        this.scrollLeft -= (delta * 30);
     });
 
     /*! 
@@ -31,8 +41,10 @@ jQuery(document).ready(function($) {
      */
     $('.toggle-sidebar').click(function(event) {
         $('#sidebar').toggleClass('open');
+        $('.navbar-brand').toggleClass('active');
         event.preventDefault();
     });
+    
     $('.toggle-lang-bar').click(function(event) {
         $('#lang-bar').toggleClass('open');
         event.preventDefault();
@@ -61,6 +73,7 @@ jQuery(document).ready(function($) {
             $( "#high-price" ).html(ui.values[ 1 ] + " €");
         }
     });
+    
     $( "#lower-price" ).html($( "#budget-slider" ).slider( "values", 0 ) + " €");
     $( "#high-price" ).html($( "#budget-slider" ).slider( "values", 1 ) + " €");
 });

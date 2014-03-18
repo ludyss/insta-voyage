@@ -10,6 +10,8 @@
 @import 'vendor/font-awesome.min.css';
 @import 'vendor/jquery-ui.css';
 
+/*@import url(http://fonts.googleapis.com/css?family=Volkhov:700italic);*/
+
 /* Horizontal Scrolling
 ===========================================================*/
 html {
@@ -25,9 +27,15 @@ body {
     overflow-x: visible;
     overflow-y: hidden;
 }
+
 h1,h2,h3,h4,h5,h6{
     color: #00a6e4;
 }
+
+.btn {
+    font-weight: bold;
+}
+
 .well > h1,
 .well > h2,
 .well > h3,
@@ -39,6 +47,14 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 25px;
     border-bottom: 2px solid #00a6e4;
 }
+
+#accueil h2 {
+    color: #fff;
+    font-family: 'Volkhov', serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 body > section {
     position: relative;
     z-index: 500;
@@ -49,15 +65,29 @@ body > section {
     height: 100%;
 }
 
-/* Section theming
-===========================================================*/
-#accueil {
-    background: url('../img/04.jpg') center center no-repeat;
-    background-size: 100%;
+section > video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
 }
 
-#accueil h2 {
-    color: #fff;
+/* Spacers
+===========================================================*/
+.spacer {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+}
+.spacer.spacer-thin {
+    height: 8px;
+}
+
+.spacer.spacer-wide {
+    height: 32px;
 }
 
 /* Navbar
@@ -65,16 +95,26 @@ body > section {
 .navbar {
     min-height: 40px;
     border: none;
-    color: #000;
-    /*background: rgba(255,255,255,.8);*/
-    background: rgba(0,101,139,.6);
 }
 
-.navbar-brand {
+.navbar-default  {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
     width: 200px;
     text-align: center;
     padding: 10px;
     height: 40px;
+    font-family: 'Volkhov', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.navbar-default .navbar-brand.active {
+    color: #428BCA;
 }
 
 .navbar-nav > li > a {
@@ -82,10 +122,15 @@ body > section {
     padding-bottom: 10px;
 }
 
-.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-    color: #e89054;
-    font-weight: bolder;
+.navbar-default .navbar-nav > li > a {
+    font-weight: bold;
 }
+
+#accueil .well {
+    background-color: #fff;
+    border: none;
+}
+
 /* Aside
 ===========================================================*/
 #sidebar {
@@ -113,11 +158,6 @@ body > section {
 
 /* Wells
 ===========================================================*/
-.well {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
 
 /* Form elements
 ===========================================================*/
@@ -128,82 +168,60 @@ body > section {
 .form-inline .form-control {
     width: 100%;
 }
+
 .btn, .form-control {
     border-radius: 0px;
     -moz-border-radius: 0px;
     -o-border-radius: 0px;
 }
+
 /* JQuery ui sliders
 ===========================================================*/
 .ui-slider-horizontal {
-    height: 20px;
+    height: 1em;
     margin: 10px 0;
 }
 
 .ui-slider .ui-slider-handle {
-    width: 0;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #428BCA;
     cursor: move;
 }
 
-.ui-slider .ui-slider-handle {
-    width: 20px;
-    height: 20px;
-    cursor: move;
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
-    border: none;
+.ui-slider-horizontal .ui-slider-range {
+    background-color: #c4e3f3;
 }
 
 .ui-slider-horizontal .ui-slider-handle {
-    top: 0; 
-    margin-left: -10px;
-    background-color: #ec9154;
-    border: 1px solid #6d2c00;
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-    background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#ededed;
-    border:1px solid #dcdcdc;
+    top: -5px; 
+    margin-left: -10px; 
 }
 
-.ui-slider-range {
-    background-color: #e89054;
-}
 .ui-widget-content {
-    border: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
+
 .price{
-    color: #e89054;
+    color: #428BCA;
     font-weight: bolder;
 }
 
-/* Search area style
+/*
 ===========================================================*/
-.screen{
-    background-color: #84759C;
-    background-image: url('../img/09.jpg');
-    background-size:100% 100%;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    background-attachment: fixed;
-}
 .screen > .container {
-    margin-top: 7%;
+    position: relative;
+    top: 50%;
+    margin-top: -180px;
     border-bottom-color: #E3E3E3;
 }
 
-/* Tumbnail
+/* Thumbnails
 ===========================================================*/
-.thumbnail
-{
+.thumbnail {
     min-height: 300px;
     position:relative;       
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -213,15 +231,14 @@ body > section {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.caption > p
-{
+
+.caption > p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.thumbnail:before, .thumbnail:after
-{
+.thumbnail:before, .thumbnail:after {
     content:"";
     position:absolute; 
     z-index:-1;
@@ -237,11 +254,12 @@ body > section {
 }
 /* sejours
 ===========================================================*/
-#sejours{
+#sejours {
     overflow-y: auto;
     overflow-x: hidden;
 }
-/* Lang
+
+/* Lang-bar
 ===========================================================*/
 #lang-bar {
     position: relative;
@@ -261,9 +279,9 @@ body > section {
     text-overflow: ellipsis;
 }
 
-#lang-bar.open{
+#lang-bar.open {
     height: 80px;
 }
-#lang-bar > menu{
+#lang-bar > menu {
     margin-top: 40px;
 }

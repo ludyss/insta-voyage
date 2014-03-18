@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <route pattern="/" controller="default" action="index"/>
+    
+    <!--
+    <route pattern="/hello" controller="default" action="hello"/>
+    <route pattern="/name/(\w+)" controller="default" action="name" params="name"/>
+    <route pattern="/getonly" controller="default" action="getonly"/>
+    <route pattern="/postonly" controller="default" action="postonly" methods="post"/>
+    -->
+</routes>
