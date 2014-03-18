@@ -10,7 +10,16 @@
 @import 'vendor/font-awesome.min.css';
 @import 'vendor/jquery-ui.css';
 
-@import url(http://fonts.googleapis.com/css?family=Volkhov:700italic);
+@font-face {
+    font-family: 'volkhovbold_italic';
+    src: url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.eot');
+    src: url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.woff') format('woff'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.ttf') format('truetype'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.svg#volkhovbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
 
 /* Horizontal Scrolling
 ===========================================================*/
@@ -50,9 +59,9 @@ h1,h2,h3,h4,h5,h6{
 
 #accueil h2 {
     color: #fff;
-    font-family: 'Volkhov', serif;
-    font-weight: 700;
-    font-size: 1.5em;
+    font-family: 'volkhovbold_italic', serif;
+    font-weight: bold;
+    font-size: 1.7em;
     font-style: italic;
 }
 
@@ -67,8 +76,7 @@ body > section {
     z-index: 500;
     vertical-align:top;
     display: block;
-    padding-top: 50px;
-    min-width: 800px;
+    padding: 50px 20px 20px 20px;
     height: 100%;
 }
 
@@ -82,10 +90,6 @@ section > video {
 
 section > video:focus {
     outline: none;
-}
-
-section:not(#accueil) {
-    border-top: 40px solid rgba(30,30,30,.4);
 }
 
 /* Spacers
@@ -108,42 +112,50 @@ section:not(#accueil) {
 /* Navbar
 ===========================================================*/
 .navbar {
-    min-height: 20px;
+    min-height: 50px;
+    height: 50px;
     border: none;
 }
 
 .navbar-brand {
-    padding: 8px;
-    font-size: 18px;
+    padding: 6px;
+    font-size: 22px;
     height: auto;
 }
 
 .navbar-default  {
     background-color: #3276B1;
-    border-bottom: 1px solid #b4bcff;
+    /*box-shadow: 4px 0 4px 2px rgba(50,50,50,.5);*/
+    border-bottom: 1px solid rgba(255,255,255,.8);
 }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
-    font-family: 'Volkhov', serif;
-    font-weight: 700;
+    font-family: 'volkhovbold_italic', serif;
+    font-weight: bold;
     font-style: italic;
     color: #fff;
 }
 
-.navbar-nav > li > a {
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
 .navbar-default .navbar-nav > li > a {
-    font-size: .9em;
+    font-size: 1em;
     font-family: Arial;
     color: #fff;
+    padding-top: 25px;
+    padding-bottom: 4px;
+    transition: ease-in-out all .3s;
 }
-.navbar-default .navbar-nav > li.active > a {
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:focus {
+    background-color: #14B5F2;
     color: #fff;
-    background-color: #00a6e4;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    outline: none;
+    color: #fff;
 }
 
 /* Aside
@@ -170,9 +182,29 @@ section:not(#accueil) {
 #sidebar.open{
     width: 200px;
 }
-
-/* Wells
+/* thubms rails
 ===========================================================*/
+
+.thumbs-rail {
+    width: 100%;
+}
+
+.thumbs-rail .thumb {
+    float: left;
+    width: 440px;
+    padding: 30px 20px;
+}
+
+.thumb img {
+    width: 100%;
+    height: 250px;
+}
+
+/* sejours
+===========================================================*/
+#sejours {
+    width: 3000px;
+}
 
 /* Form elements
 ===========================================================*/
@@ -266,12 +298,6 @@ section:not(#accueil) {
     right:10px;
     -moz-border-radius:100px / 10px;
     border-radius:100px / 10px;
-}
-/* sejours
-===========================================================*/
-#sejours {
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
 /* Lang-bar

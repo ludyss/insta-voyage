@@ -26,7 +26,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
-                <a class="navbar-brand toggle-sidebar" href="#">Cross<span>Island</span></a>
+                <a class="navbar-brand toggle-sidebar" href="#"><img src="assets/img/logo/logo_64.png" alt="">Cross<span>Island</span></a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -95,6 +95,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-1">
+                            
+                        </div>
                     </div>
                 </form>
             </div><!-- /.container -->
@@ -102,41 +105,49 @@
         </section>
 
         <section id="sejours">
-            <div class="container">
-                <div class="row">
-                    <div class="page-header">
-                        <h1>Nos différents séjours. <small> dans les îles</small></h1>
+            <div class="thumbs-rail">
+                <div class="thumb">
+                    <img src="assets/img/01.jpg" alt="">
+                    <div class="caption">
+                        <h3 class="title-header">Hawaï Break</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
                     </div>
+                </div>
 
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="assets/img/400x200.gif" alt="">
-                            <div class="caption">
-                                <h3 class="title-header">Canarie Beach tour</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                                <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
-                            </div>
-                        </div>
+                <div class="thumb">
+                    <img src="assets/img/02.jpg" alt="">
+                    <div class="caption">
+                        <h3 class="title-header">Tahiti Sunset</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="assets/img/400x200.gif" alt="">
-                            <div class="caption">
-                                <h3 class="title-header">Canarie History tour</h3>
-                                <p>Visitez toutes les lieux historique des îles</p>
-                                <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="thumb">
+                    <img src="assets/img/03.jpg" alt="">
+                    <div class="caption">
+                        <h3 class="title-header">Canarie Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="assets/img/400x200.gif" alt="">
-                            <div class="caption">
-                                <h3 class="title-header">Hawaï Break</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                                <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="thumb">
+                    <img src="assets/img/05.jpg" alt="">
+                    <div class="caption">
+                        <h3 class="title-header">Hawaï Break</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                    </div>
+                </div>
+
+                <div class="thumb">
+                    <img src="assets/img/04.jpg" alt="">
+                    <div class="caption">
+                        <h3 class="title-header">Hawaï Break</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
                     </div>
                 </div>
             </div>
@@ -156,7 +167,7 @@
 
         </section>
 
-        <section id="croisieres" data-bg="assets/img/02.jpg">
+        <section id="croisieres">
 
 
 

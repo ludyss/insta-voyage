@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
      */
     $('.screen').width(windowWidth)
             .height(windowHeight);
- 
+    
     if(windowHeight > windowWidth) {
         $('section > video').css({
             'width' : 'auto',
