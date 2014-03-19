@@ -5,6 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Voyages</title>
         <meta name="description" content="">
@@ -20,7 +25,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top animated slideInDown" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collaspe">
                     <span class="sr-only">Toggle navigation</span>
@@ -31,6 +36,7 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li class=""><a href="#accueil"><i class="fa fa-home"> </i></a></li>
                     <li class="hidden"><a href="#accueil">Accueil</a></li>
                     <li class=""><a href="#sejours">Séjours</a></li>
                     <li class=""><a href="#hotels">Hôtels</a></li>
@@ -57,14 +63,14 @@
 
         <section id="accueil" class="screen">
 
-            <video preload="auto" autoplay="autoplay" loop="loop" muted="muted">
+            <video preload="auto" autoplay="autoplay" loop="loop" muted="muted" class=" animated fadeInDown">
                 <source src="assets/intro.mp4" type="video/mp4"> 
             </video>
 
             <div class="container">
                 <form class="form-inline" action="#" accept-charset="utf-8" method="post" role="search">
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-10 col-md-offset-1 animated slideInDown">
                             <h2>Trouvez votre séjour idéal</h2>
                             <div class="well">
                                 <div class="row">
@@ -90,13 +96,13 @@
                                     </div>
 
                                     <div class="form-group col-md-2">
-                                        <button type="submit" class="btn btn-block btn-primary">Trouver</button>
+                                        <button type="button" class="btn btn-block btn-primary" id="find">Trouver</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1">
-                            
+
                         </div>
                     </div>
                 </form>
@@ -111,7 +117,10 @@
                     <div class="caption">
                         <h3 class="title-header">Hawaï Break</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div class="text-right">
+                            <h3 class="price-header">A partir de : 512 € !</h3>
+                        </div>
                     </div>
                 </div>
 
@@ -120,7 +129,7 @@
                     <div class="caption">
                         <h3 class="title-header">Tahiti Sunset</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 
@@ -129,7 +138,7 @@
                     <div class="caption">
                         <h3 class="title-header">Canarie Tour</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 
@@ -138,7 +147,7 @@
                     <div class="caption">
                         <h3 class="title-header">Hawaï Break</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 
@@ -147,7 +156,7 @@
                     <div class="caption">
                         <h3 class="title-header">Hawaï Break</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Plus d'info</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme...</a></div>
                     </div>
                 </div>
                 <div class="thumb">
