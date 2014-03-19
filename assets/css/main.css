@@ -170,9 +170,9 @@ section > video:focus {
     float: left;
     width: 0;
     overflow: hidden;
-    transition: width ease-out .2s;
-    -webkit-transition: width ease-in-out .2s;
-    -moz-transition: width ease-in-out .2s;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
     box-shadow: 3px 0 6px rgba(0,0,0,.2);
     white-space: nowrap;
     overflow: hidden;
@@ -182,54 +182,58 @@ section > video:focus {
 #sidebar.open{
     width: 200px;
 }
+
 /* thubms rails
 ===========================================================*/
-
-.thumbs-rail {
+.thumbnail-container {
     width: 100%;
 }
 
-.thumbs-rail .thumb {
+.thumbnail {
     float: left;
     width: 440px;
     padding: 30px 20px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
 }
 
-.thumb img {
+.thumbnail img {
     width: 100%;
     height: 250px;
 }
 
+.thumbnail .caption {
+    position: relative;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
 
-/* Thumbnails
-===========================================================*/
-.thumb:hover {
-    margin-top: 10px;
-    height: 600px;
-    position:relative;       
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    transition: all ease-out .2s;
-    -webkit-transition: all ease-in-out .2s;
-    -moz-transition: all ease-in-out .2s;
+.thumbnail:hover .caption {
+    top: -150px;
+    height: 400px;
 }
-.thumb:hover h3.price-header,
-.thumb:hover .price-header{
-    opacity: 1;
-    transition: opacity ease-in-out .3s;
-    -webkit-transition: opacity ease-in-out .3s;
-    -moz-transition: opacity ease-in-out .3s;
+
+.thumbnail .caption h3 {
+    padding: 15px 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #00a6e4;
 }
-h3.price-header,
-price-header{
-    margin-top: 50px;
-    padding-bottom: 20px;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #orange;
-    color: orange;
-    opacity: 0;
+
+.thumbnail .caption h3 .price {
+    color: #ffab00;
+    font-size: 1.3em;
+    float: right;
 }
+
+.thumbnail .caption h3 .price small {
+    font-size: .4em;
+}
+
 /* Form elements
 ===========================================================*/
 .form-inline .control-label {
@@ -274,11 +278,6 @@ price-header{
 .ui-widget-content {
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.price{
-    color: #428BCA;
-    font-weight: bolder;
 }
 
 /*

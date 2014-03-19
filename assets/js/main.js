@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
     $('.screen').width(windowWidth)
             .height(windowHeight);
     
-    var thumbs = $('#sejours .thumbs-rail .thumb');
+    var thumbs = $('#sejours .thumbnail-container .thumbnail');
     $('#sejours').width($(thumbs[0]).innerWidth() * thumbs.length);
     
     if(windowHeight > windowWidth) {
@@ -65,8 +65,8 @@ jQuery(document).ready(function($) {
             event.preventDefault();
         }
     });
+    
     $('#find').click(function(event) {
-        $('a#sejours').click();
         $("html, body").stop().animate({
             scrollLeft: $('#sejours').offset().left
         }, 300);
