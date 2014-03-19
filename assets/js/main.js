@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
      */
     $('.toggle-sidebar').click(function(event) {
         $('#sidebar').toggleClass('open');
-        $('.navbar-brand').toggleClass('active');
+        //$('.navbar-brand').toggleClass('active');
         event.preventDefault();
     });
     
@@ -64,6 +64,13 @@ jQuery(document).ready(function($) {
             }, 300);
             event.preventDefault();
         }
+    });
+    $('#find').click(function(event) {
+        $('a#sejours').click();
+        $("html, body").stop().animate({
+            scrollLeft: $('#sejours').offset().left
+        }, 300);
+        event.preventDefault();
     });
 
     $('#budget-slider').slider({
