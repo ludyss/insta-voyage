@@ -36,8 +36,7 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="#accueil"><i class="fa fa-home"> </i></a></li>
-                    <li class="hidden"><a href="#accueil">Accueil</a></li>
+                    <li class=""><a href="#accueil"><i class="fa fa-home"></i></a></li>
                     <li class=""><a href="#sejours">Séjours</a></li>
                     <li class=""><a href="#hotels">Hôtels</a></li>
                     <li class=""><a href="#croisieres">Croisières</a></li>
@@ -111,38 +110,35 @@
         </section>
 
         <section id="sejours">
-            <div class="thumbs-rail">
-                <div class="thumb">
+            <div class="thumbnail-container">
+                <div class="thumbnail">
                     <img src="assets/img/01.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Hawaï Break</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
+                        <h3>Hawaï Break<span class="price"><small>à partir de </small>689€</span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius.</p>
                         <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
-                        <div class="text-right">
-                            <h3 class="price-header">A partir de : 512 € !</h3>
-                        </div>
                     </div>
                 </div>
 
-                <div class="thumb">
+                <div class="thumbnail">
                     <img src="assets/img/02.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Tahiti Sunset</h3>
+                        <h3 class="title-header">Tahiti Sunset<span class="price"><small>à partir de </small>1029€</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
                         <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 
-                <div class="thumb">
+                <div class="thumbnail">
                     <img src="assets/img/03.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Canarie Tour</h3>
+                        <h3 class="title-header">Canarie Tour<span class="price"><small>à partir de </small>873€</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
                         <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 
-                <div class="thumb">
+                <div class="thumbnail">
                     <img src="assets/img/05.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Hawaï Break</h3>
@@ -151,7 +147,7 @@
                     </div>
                 </div>
 
-                <div class="thumb">
+                <div class="thumbnail">
                     <img src="assets/img/04.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Hawaï Break</h3>
@@ -159,7 +155,7 @@
                         <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme...</a></div>
                     </div>
                 </div>
-                <div class="thumb">
+                <div class="thumbnail">
                     MORE
                 </div>
             </div>
