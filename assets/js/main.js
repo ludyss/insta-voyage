@@ -9,19 +9,19 @@ jQuery(document).ready(function($) {
      */
     $('.screen').width(windowWidth)
             .height(windowHeight);
-    
+
     var thumbs = $('#sejours .thumbnail-container .thumbnail');
     $('#sejours').width($(thumbs[0]).innerWidth() * thumbs.length);
-    
-    if(windowHeight > windowWidth) {
+
+    if (windowHeight > windowWidth) {
         $('section > video').css({
-            'width' : 'auto',
-            'height' : '100%'
+            'width': 'auto',
+            'height': '100%'
         });
     } else {
         $('section > video').css({
-            'width' : '100%',
-            'height' : 'auto'
+            'width': '100%',
+            'height': 'auto'
         });
     }
 
@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
         //$('.navbar-brand').toggleClass('active');
         event.preventDefault();
     });
-    
+
     $('.toggle-lang-bar').click(function(event) {
         $('#lang-bar').toggleClass('open');
         event.preventDefault();
@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
             event.preventDefault();
         }
     });
-    
+
     $('#find').click(function(event) {
         $("html, body").stop().animate({
             scrollLeft: $('#sejours').offset().left
@@ -79,11 +79,23 @@ jQuery(document).ready(function($) {
         max: 3000,
         values: [200, 1200],
         slide: function(event, ui) {
-            $( "#lower-price" ).html(ui.values[ 0 ] + " €");
-            $( "#high-price" ).html(ui.values[ 1 ] + " €");
+            $("#lower-price").html(ui.values[ 0 ] + " €");
+            $("#high-price").html(ui.values[ 1 ] + " €");
         }
     });
-    
-    $( "#lower-price" ).html($( "#budget-slider" ).slider( "values", 0 ) + " €");
-    $( "#high-price" ).html($( "#budget-slider" ).slider( "values", 1 ) + " €");
+
+    $("#lower-price").html($("#budget-slider").slider("values", 0) + " €");
+    $("#high-price").html($("#budget-slider").slider("values", 1) + " €");
+
+
+    $.ajax({
+        method: 'post',
+        url: '/video',
+        success: function(response) {
+            var list = eval('(' + response + ')');
+            var video = Math.round((Math.random() * (list.length - 1)) + 0);
+            $('video source').attr('src', 'assets/video/' + list[video]);
+            $("video").load().play();
+        }
+    });
 });

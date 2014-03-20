@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routes>
     <route pattern="/" controller="default" action="index"/>
-    
+    <route pattern="/video" controller="video" action="getVideoList"  methods="post"/>
     <!--
     <route pattern="/hello" controller="default" action="hello"/>
     <route pattern="/name/(\w+)" controller="default" action="name" params="name"/>
