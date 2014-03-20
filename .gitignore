@@ -9,3 +9,7 @@
 # Git files
 ###########
 !.gitkeep
+
+# Assets
+###########
+assets/video

@@ -63,7 +63,7 @@
         <section id="accueil" class="screen">
 
             <video preload="auto" autoplay="autoplay" loop="loop" muted="muted" class=" animated fadeInDown">
-                <source src="assets/intro.mp4" type="video/mp4"> 
+                <source src="assets/video/intro.mp4" type="video/mp4"> 
             </video>
 
             <div class="container">
@@ -114,62 +114,159 @@
                 <div class="thumbnail">
                     <img src="assets/img/01.jpg" alt="">
                     <div class="caption">
-                        <h3>Hawaï Break<span class="price"><small>à partir de </small>689€</span></h3>
+                        <h3>Hawaï Break
+                            <span class="quality">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius.</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div class="clearfix">
+                            <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                            <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                            <span class="price"><small>à partir de </small>1489€</span>
+                        </div>
+                        <div class="formula">
+                            <ul> 
+                                <li>
+                                    <span class="price pull-right">1610€</span>
+                                </li>
+                                <li>
+                                    <span class="price pull-right">1539€</span>
+                                </li>
+                                <li>
+                                    <span class="price pull-right">1489€</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <div class="thumbnail">
                     <img src="assets/img/02.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Tahiti Sunset<span class="price"><small>à partir de </small>1029€</span></h3>
+                        <h3 class="title-header">Tahiti Sunset
+                            <span class="quality">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div>
+                            <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                            <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                            <span class="price"><small>à partir de </small>1649€</span>
+                        </div>
+                        <div class="formula">
+                            <ul>
+                                <li>
+                                    <span class="label label-primary">
+                                        <i class="fa fa-male"></i>
+                                        <i class="fa fa-female"></i>
+                                    </span>
+                                    <span class="label label-primary">
+                                        <i class="fa fa-smile-o"></i>
+                                    </span>
+                                    couple + enfant(s)
+                                    <span class="price pull-right">1805€</span>
+                                </li>
+                                <li>
+                                    <span class="label label-primary">
+                                        <i class="fa fa-male"></i>
+                                        <i class="fa fa-female"></i>
+                                    </span>
+                                    couple
+                                    <span class="price pull-right">1768€</span>
+                                </li>
+                                <li>
+                                    <span class="label label-primary">
+                                        <i class="fa fa-male"></i>
+                                    </span>
+                                    solo
+                                    <span class="price pull-right">1649€</span>
+                                </li>
+                                <li>
+                                    <span class="label label-primary">
+                                        <i class="fa fa-group"></i>
+                                    </span>
+                                    groupe
+                                    <span class="price pull-right">1649€</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <div class="thumbnail">
                     <img src="assets/img/03.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Canarie Tour<span class="price"><small>à partir de </small>873€</span></h3>
+                        <h3 class="title-header">Canaries Tour
+                            <span class="quality">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div>
+                            <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                            <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                            <span class="price"><small>à partir de </small>749€</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="thumbnail">
                     <img src="assets/img/05.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Hawaï Break</h3>
+                        <h3 class="title-header">Maldives
+                            <span class="quality">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div>
+                            <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                            <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                            <span class="price"><small>à partir de </small>917€</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="thumbnail">
                     <img src="assets/img/04.jpg" alt="">
                     <div class="caption">
-                        <h3 class="title-header">Hawaï Break</h3>
+                        <h3 class="title-header">Guadeloupe
+                            <span class="quality">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme...</a></div>
+                        <div>
+                            <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                            <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                            <span class="price"><small>à partir de </small>839€</span>
+                        </div>
                     </div>
-                </div>
-                <div class="thumbnail">
-                    MORE
                 </div>
             </div>
         </section>
 
-        <section id="hotels">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1>Mon Titre</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius tortor. Curabitur quis faucibus magna. Ut laoreet nunc urna, et placerat felis mattis a. Etiam lobortis ante adipiscing, ornare velit iaculis, fringilla felis. Curabitur sit amet nisl non erat ultricies tempor a ac quam. Aliquam fermentum pulvinar tortor quis tristique. Nunc vel diam ullamcorper, sagittis enim a, vulputate risus. Phasellus aliquam nunc a consequat ullamcorper. Suspendisse potenti. Nam in sapien in purus malesuada tincidunt id et dolor. Mauris justo nibh, ornare vel venenatis eu, faucibus ut nulla.</p>
-                        <p>Duis blandit diam leo, quis elementum est tincidunt semper. Nam at tincidunt arcu. Mauris fermentum lorem vel cursus dapibus. Curabitur mollis rhoncus vestibulum. Donec vel venenatis libero. Nunc et nibh lorem. Mauris aliquam massa dui, at bibendum mi dignissim vitae. Ut facilisis risus sit amet ligula ultricies egestas. In quis magna sapien. Curabitur porttitor velit justo, at dignissim purus pulvinar sed. Etiam ut nibh ipsum. Praesent at diam vel enim ornare ornare ut non sem.</p>
-                    </div>
+        <section id="hotels" class="inverse">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Mon Titre</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius tortor. Curabitur quis faucibus magna. Ut laoreet nunc urna, et placerat felis mattis a. Etiam lobortis ante adipiscing, ornare velit iaculis, fringilla felis. Curabitur sit amet nisl non erat ultricies tempor a ac quam. Aliquam fermentum pulvinar tortor quis tristique. Nunc vel diam ullamcorper, sagittis enim a, vulputate risus. Phasellus aliquam nunc a consequat ullamcorper. Suspendisse potenti. Nam in sapien in purus malesuada tincidunt id et dolor. Mauris justo nibh, ornare vel venenatis eu, faucibus ut nulla.</p>
+                    <p>Duis blandit diam leo, quis elementum est tincidunt semper. Nam at tincidunt arcu. Mauris fermentum lorem vel cursus dapibus. Curabitur mollis rhoncus vestibulum. Donec vel venenatis libero. Nunc et nibh lorem. Mauris aliquam massa dui, at bibendum mi dignissim vitae. Ut facilisis risus sit amet ligula ultricies egestas. In quis magna sapien. Curabitur porttitor velit justo, at dignissim purus pulvinar sed. Etiam ut nibh ipsum. Praesent at diam vel enim ornare ornare ut non sem.</p>
                 </div>
             </div>
 
