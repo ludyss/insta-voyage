@@ -32,7 +32,6 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-
     width: 8000px;
     overflow-x: visible;
     overflow-y: hidden;
@@ -51,8 +50,7 @@ h1,h2,h3,h4,h5,h6{
 .well > h3,
 .well > h4,
 .well > h5,
-.well > h6,
-.title-header{
+.well > h6 {
     padding-bottom: 20px;
     margin-bottom: 25px;
     border-bottom: 2px solid #00a6e4;
@@ -71,6 +69,10 @@ h1,h2,h3,h4,h5,h6{
     border: none;
 }
 
+#hotels {
+    width: 440px;
+}
+
 body > section {
     position: relative;
     float: left;
@@ -79,6 +81,20 @@ body > section {
     display: block;
     padding: 50px 20px 20px 20px;
     height: 100%;
+}
+
+body > section.inverse {
+    background-color: #3276B1;
+    color: #fff;
+}
+
+.inverse h1,
+.inverse h2,
+.inverse h3,
+.inverse h4,
+.inverse h5,
+.inverse h6 {
+    color: #fff;
 }
 
 section > video {
@@ -126,8 +142,7 @@ section > video:focus {
 
 .navbar-default  {
     background-color: #3276B1;
-    /*box-shadow: 4px 0 4px 2px rgba(50,50,50,.5);*/
-    border-bottom: 1px solid rgba(255,255,255,.8);
+    box-shadow: 0 4px 4px rgba(30,30,30,.3);
 }
 
 .navbar-default .navbar-brand,
@@ -224,14 +239,58 @@ section > video:focus {
     border-bottom: 2px solid #00a6e4;
 }
 
-.thumbnail .caption h3 .price {
-    color: #ffab00;
-    font-size: 1.3em;
+.thumbnail .caption h3 .quality {
     float: right;
+    color: #ffab00;
 }
 
-.thumbnail .caption h3 .price small {
-    font-size: .4em;
+.thumbnail .price {
+    float: right;
+    color: #ffab00;
+    font-size: 2.2em;
+}
+
+.thumbnail .price small {
+    color: #ccc;
+    text-align: right;
+    font-size: 10px;
+    display: block;
+}
+
+.thumbnail .formula {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s ease;
+}
+
+.thumbnail .formula ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnail .formula ul li {
+    display: block;
+    clear: both;
+    vertical-align: middle;
+    min-height: 30px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.thumbnail .formula ul li + li {
+    border-top: 1px solid #eef;
+}
+
+.thumbnail .formula .price {
+    font-size: 1em;
+}
+
+.thumbnail:hover .formula {
+    opacity: 1;
+    overflow: visible;
+    height: auto;
 }
 
 /* Form elements
