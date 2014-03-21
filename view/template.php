@@ -6,9 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="cache-control" content="max-age=0" />
-        <meta http-equiv="cache-control" content="no-cache" />
-        <meta http-equiv="expires" content="0" />
-        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="cache-control" content="no-cache" />        
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Voyages</title>
@@ -37,9 +35,10 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class=""><a href="#accueil"><i class="fa fa-home"></i></a></li>
-                    <li class=""><a href="#sejours">Séjours</a></li>
+                    <li class=""><a href="#sejours">Circuit</a></li>
                     <li class=""><a href="#hotels">Hôtels</a></li>
                     <li class=""><a href="#croisieres">Croisières</a></li>
+                    <li class=""><a href="#contact">Contact</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -49,7 +48,6 @@
                 <li><a href="#"><i class="fa fa-info-circle"></i> Information</a></li>
                 <li><a href="#"><i class="fa fa-user"></i> Connexion</a></li>
                 <li><a href="#"><i class="fa fa-question-circle"></i> Aide</a></li>
-                <li><a href="#"><i class="fa fa-home"> </i> Contact</a></li>
             </menu>
         </aside>
 
@@ -59,10 +57,15 @@
                 <li><a href="#">Français</a></li>
             </menu>
         </div>
+        <div id="nav-arrow">
+            <h1>
+                <i class="fa fa-chevron-right  fa-2x"></i>
+            </h1>
+        </div>
 
         <section id="accueil" class="screen">
 
-            <video preload="auto" autoplay="autoplay" loop="loop" muted="muted" class=" animated fadeInDown">
+            <video preload="auto" autoplay="autoplay" loop="loop" muted="muted">
                 <source src="assets/video/intro.mp4" type="video/mp4"> 
             </video>
 
@@ -128,15 +131,39 @@
                             <span class="price"><small>à partir de </small>1489€</span>
                         </div>
                         <div class="formula">
-                            <ul> 
+                            <ul>
                                 <li>
-                                    <span class="price pull-right">1610€</span>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-smile-o fa-stack-1x"></i>
+                                    </span>
+                                    Famille
+                                    <span class="price pull-right">1805€</span>
                                 </li>
                                 <li>
-                                    <span class="price pull-right">1539€</span>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-heart fa-stack-1x"></i>
+                                    </span>
+                                    Couple
+                                    <span class="price pull-right">1768€</span>
                                 </li>
                                 <li>
-                                    <span class="price pull-right">1489€</span>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-male fa-stack-1x"></i>
+                                        <i class="fa fa-female fa-stack-1x"></i>
+                                    </span>
+                                    Solo
+                                    <span class="price psull-right">1649€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-group fa-stack-1x"></i>
+                                    </span>
+                                    Groupe
+                                    <span class="price pull-right">1649€</span>
                                 </li>
                             </ul>
                         </div>
@@ -163,36 +190,36 @@
                         <div class="formula">
                             <ul>
                                 <li>
-                                    <span class="label label-primary">
-                                        <i class="fa fa-male"></i>
-                                        <i class="fa fa-female"></i>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-smile-o fa-stack-1x"></i>
                                     </span>
-                                    <span class="label label-primary">
-                                        <i class="fa fa-smile-o"></i>
-                                    </span>
-                                    couple + enfant(s)
+                                    Famille
                                     <span class="price pull-right">1805€</span>
                                 </li>
                                 <li>
-                                    <span class="label label-primary">
-                                        <i class="fa fa-male"></i>
-                                        <i class="fa fa-female"></i>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-heart fa-stack-1x"></i>
                                     </span>
-                                    couple
+                                    Couple
                                     <span class="price pull-right">1768€</span>
                                 </li>
                                 <li>
-                                    <span class="label label-primary">
-                                        <i class="fa fa-male"></i>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-male fa-stack-1x"></i>
+                                        <i class="fa fa-female fa-stack-1x"></i>
                                     </span>
-                                    solo
-                                    <span class="price pull-right">1649€</span>
+                                    Solo
+                                    <span class="price psull-right">1649€</span>
                                 </li>
                                 <li>
-                                    <span class="label label-primary">
-                                        <i class="fa fa-group"></i>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-group fa-stack-1x"></i>
                                     </span>
-                                    groupe
+                                    Groupe
                                     <span class="price pull-right">1649€</span>
                                 </li>
                             </ul>
@@ -216,6 +243,43 @@
                             <a href="#" class="btn btn-link" role="button">Voir le programme</a>
                             <span class="price"><small>à partir de </small>749€</span>
                         </div>
+                        <div class="formula">
+                            <ul>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-smile-o fa-stack-1x"></i>
+                                    </span>
+                                    Famille
+                                    <span class="price pull-right">1805€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-heart fa-stack-1x"></i>
+                                    </span>
+                                    Couple
+                                    <span class="price pull-right">1768€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-male fa-stack-1x"></i>
+                                        <i class="fa fa-female fa-stack-1x"></i>
+                                    </span>
+                                    Solo
+                                    <span class="price psull-right">1649€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-group fa-stack-1x"></i>
+                                    </span>
+                                    Groupe
+                                    <span class="price pull-right">1649€</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -237,6 +301,43 @@
                             <a href="#" class="btn btn-link" role="button">Voir le programme</a>
                             <span class="price"><small>à partir de </small>917€</span>
                         </div>
+                        <div class="formula">
+                            <ul>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-smile-o fa-stack-1x"></i>
+                                    </span>
+                                    Famille
+                                    <span class="price pull-right">1805€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-heart fa-stack-1x"></i>
+                                    </span>
+                                    Couple
+                                    <span class="price pull-right">1768€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-male fa-stack-1x"></i>
+                                        <i class="fa fa-female fa-stack-1x"></i>
+                                    </span>
+                                    Solo
+                                    <span class="price psull-right">1649€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-group fa-stack-1x"></i>
+                                    </span>
+                                    Groupe
+                                    <span class="price pull-right">1649€</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -256,6 +357,43 @@
                             <a href="#" class="btn btn-link" role="button">Voir le programme</a>
                             <span class="price"><small>à partir de </small>839€</span>
                         </div>
+                        <div class="formula">
+                            <ul>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-smile-o fa-stack-1x"></i>
+                                    </span>
+                                    Famille
+                                    <span class="price pull-right">1805€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-heart fa-stack-1x"></i>
+                                    </span>
+                                    Couple
+                                    <span class="price pull-right">1768€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-male fa-stack-1x"></i>
+                                        <i class="fa fa-female fa-stack-1x"></i>
+                                    </span>
+                                    Solo
+                                    <span class="price psull-right">1649€</span>
+                                </li>
+                                <li>
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-square-o fa-stack-2x"></i>
+                                        <i class="fa fa-group fa-stack-1x"></i>
+                                    </span>
+                                    Groupe
+                                    <span class="price pull-right">1649€</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,18 +402,37 @@
         <section id="hotels" class="inverse">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Mon Titre</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius tortor. Curabitur quis faucibus magna. Ut laoreet nunc urna, et placerat felis mattis a. Etiam lobortis ante adipiscing, ornare velit iaculis, fringilla felis. Curabitur sit amet nisl non erat ultricies tempor a ac quam. Aliquam fermentum pulvinar tortor quis tristique. Nunc vel diam ullamcorper, sagittis enim a, vulputate risus. Phasellus aliquam nunc a consequat ullamcorper. Suspendisse potenti. Nam in sapien in purus malesuada tincidunt id et dolor. Mauris justo nibh, ornare vel venenatis eu, faucibus ut nulla.</p>
-                    <p>Duis blandit diam leo, quis elementum est tincidunt semper. Nam at tincidunt arcu. Mauris fermentum lorem vel cursus dapibus. Curabitur mollis rhoncus vestibulum. Donec vel venenatis libero. Nunc et nibh lorem. Mauris aliquam massa dui, at bibendum mi dignissim vitae. Ut facilisis risus sit amet ligula ultricies egestas. In quis magna sapien. Curabitur porttitor velit justo, at dignissim purus pulvinar sed. Etiam ut nibh ipsum. Praesent at diam vel enim ornare ornare ut non sem.</p>
+                    <h1>À propos de Cross Island</h1>
+                    <p>
+                        Cross Island® est un site de voyage au parmis tant d'autre, il permet aux 
+                        voyageurs de réserver et d'obtenir le voyage de leur rêve. Cross Island 
+                        offre des Séjours fiables et propose une grande variété de choix de voyages.
+                    </p>
+                    <p>
+                        Cross Island comprend également Cross Island for Business, 
+                        une division dédiée aux entreprises de l’industrie du tourisme permettant 
+                        aux professionnels d’accéder aux offres spéciales pour entreprise et PME.
+                    </p>
+                    <h2>Nos Partenaires :</h2>
+                    <address>www.airfarewatchdog.com, www.bookingbuddy.com, www.cruisecritic.com, 
+                        www.everytrail.com, www.familyvacationcritic.com, www.flipkey.com, 
+                        www.gateguru.com, www.holidaylettings.co.uk, www.holidaywatchdog.com, 
+                        www.independenttraveler.com, www.jetsetter.com, www.niumba.com,  
+                        www.onetime.com, www.oyster.com, www.seatguru.com, www.smartertravel.com, 
+                        www.tingo.com, www.travelpod.com, www.virtualtourist.com, www.whereivebeen.com et 
+                        www.kuxun.cn. 
+                    </address>
                 </div>
             </div>
 
         </section>
 
         <section id="croisieres">
-
-
-
+            <div class="row">
+                <div class="col-md-12">
+                    
+                </div>
+            </div>
         </section>
 
         <script src="assets/js/vendor/jquery-1.10.2.min.js"></script>
