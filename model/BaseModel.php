@@ -80,16 +80,13 @@ class BaseModel
         $this->db = null;
     }
 
-    
     public function findAll(array $columns = array(), $offset = null, $limit = null)
     {
-        if($this->db !instanceof \PDO) {
-            
+        if (!$this->db instanceof \PDO) {
+            $this->init();
         }
 
         $sql = 'SELECT * FROM `Trip`';
-
-
 
         $query = $this->db->prepare($sql);
 
@@ -99,6 +96,10 @@ class BaseModel
 
     public function findById($id, array $columns = array())
     {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
         $sql = 'SELECT * FROM `Trip` WHERE `id_trip` = :id';
         $query = $this->db->prepare($sql);
 

@@ -2,6 +2,7 @@
 <routes>
     <route pattern="/" controller="default" action="index"/>
     <route pattern="/contact" controller="default" action="contact"/>
+    <route pattern="/video" controller="video" action="getVideoList" methods="post"/>
     <route pattern="/admin" controller="admin" action="index"/>
         
     <route pattern="/admin/sejours" controller="trip" action="index"/>
