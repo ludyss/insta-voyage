@@ -95,3 +95,87 @@ section > video:focus {
     margin-top: -50px;
     border-bottom-color: #E3E3E3;
 }
+
+/* Lang-bar
+===========================================================*/
+#lang-bar {
+    position: relative;
+    z-index: 1001;
+    height: 0px;
+    background-color: #fff;
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    transition: height ease-out .2s;
+    -webkit-transition: height ease-in-out .2s;
+    -moz-transition: height ease-in-out .2s;
+    box-shadow: 3px 0 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#lang-bar.open {
+    height: 80px;
+}
+#lang-bar > menu {
+    margin-top: 40px;
+}
+
+/* Nav arrow
+===========================================================*/
+#nav-arrow{
+    position: fixed;
+    z-index: 2000;
+    height: 100%;
+    width: 100px;
+    right: 0px;
+    background: transparent;
+    float: right;
+    top: 55%;
+    opacity: 0;
+    /*-webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation:where-to-go 3s;
+    -webkit-animation:where-to-go 3s; /* Safari and Chrome */
+    -moz-animation:where-to-go 3s;
+    -webkit-animation-iteration-count:2;
+    -moz-animation-iteration-count:2;
+    animation-iteration-count:2;
+}
+#nav-arrow > h1{
+    /*color: #ffab00;*/
+}
+@-webkit-keyframes where-to-go {
+  0%   { right: 0px; opacity: 0; }
+  25%   { right: 100px; opacity: 1;}
+  50%   { right: 0px; opacity: .6;}
+  75%   { right: 100px; opacity: 1; }
+  100% { right: 0px; opacity: 0; }
+}
+@-moz-keyframes where-to-go {
+  0%   { right: 0px; opacity: 0; }
+  25%   { right: 100px; opacity: 1;}
+  50%   { right: 0px; opacity: .6;}
+  75%   { right: 100px; opacity: 1; }
+  100% { right: 0px; opacity: 0; }
+}
+@-o-keyframes where-to-go {
+  0%   { right: 0px; opacity: 0; }
+  25%   { right: 100px; opacity: 1;}
+  50%   { right: 0px; opacity: .6;}
+  75%   { right: 100px; opacity: 1; }
+  100% { right: 0px; opacity: 0; }
+}
+@keyframes where-to-go {
+  0%   { right: 0px; opacity: 0; }
+  25%   { right: 100px; opacity: 1;}
+  50%   { right: 0px; opacity: .6;}
+  75%   { right: 100px; opacity: 1; }
+  100% { right: 0px; opacity: 0; }
+}
