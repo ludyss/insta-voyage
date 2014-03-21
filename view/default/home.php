@@ -337,9 +337,26 @@
 <section id="hotels" class="inverse">
     <div class="row">
         <div class="col-md-12">
-            <h1>Mon Titre</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius tortor. Curabitur quis faucibus magna. Ut laoreet nunc urna, et placerat felis mattis a. Etiam lobortis ante adipiscing, ornare velit iaculis, fringilla felis. Curabitur sit amet nisl non erat ultricies tempor a ac quam. Aliquam fermentum pulvinar tortor quis tristique. Nunc vel diam ullamcorper, sagittis enim a, vulputate risus. Phasellus aliquam nunc a consequat ullamcorper. Suspendisse potenti. Nam in sapien in purus malesuada tincidunt id et dolor. Mauris justo nibh, ornare vel venenatis eu, faucibus ut nulla.</p>
-            <p>Duis blandit diam leo, quis elementum est tincidunt semper. Nam at tincidunt arcu. Mauris fermentum lorem vel cursus dapibus. Curabitur mollis rhoncus vestibulum. Donec vel venenatis libero. Nunc et nibh lorem. Mauris aliquam massa dui, at bibendum mi dignissim vitae. Ut facilisis risus sit amet ligula ultricies egestas. In quis magna sapien. Curabitur porttitor velit justo, at dignissim purus pulvinar sed. Etiam ut nibh ipsum. Praesent at diam vel enim ornare ornare ut non sem.</p>
+            <h1>À propos de Cross Island</h1>
+            <p>
+                Cross Island® est un site de voyage au parmis tant d'autre, il permet aux
+                voyageurs de réserver et d'obtenir le voyage de leur rêve. Cross Island
+                offre des Séjours fiables et propose une grande variété de choix de voyages.
+            </p>
+            <p>
+                Cross Island comprend également Cross Island for Business,
+                une division dédiée aux entreprises de l’industrie du tourisme permettant
+                aux professionnels d’accéder aux offres spéciales pour entreprise et PME.
+            </p>
+            <h2>Nos Partenaires :</h2>
+            <address>www.airfarewatchdog.com, www.bookingbuddy.com, www.cruisecritic.com,
+                www.everytrail.com, www.familyvacationcritic.com, www.flipkey.com,
+                www.gateguru.com, www.holidaylettings.co.uk, www.holidaywatchdog.com,
+                www.independenttraveler.com, www.jetsetter.com, www.niumba.com,
+                www.onetime.com, www.oyster.com, www.seatguru.com, www.smartertravel.com,
+                www.tingo.com, www.travelpod.com, www.virtualtourist.com, www.whereivebeen.com et
+                www.kuxun.cn.
+            </address>
         </div>
     </div>
 

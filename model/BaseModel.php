@@ -86,12 +86,10 @@ class BaseModel
             $this->init();
         }
 
-        $sql = 'SELECT * FROM `Trip`';
-
+        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns) . ' FROM ' . $this->table;
         $query = $this->db->prepare($sql);
-
-        $query->execute(array(':id' => $id));
-        return $query->fetch();
+        
+        return $query->fetchAll();
     }
 
     public function findById($id, array $columns = array())
