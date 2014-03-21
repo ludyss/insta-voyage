@@ -116,7 +116,7 @@
                     <div class="caption">
                         <h3>Hawaï Break<span class="price"><small>à partir de </small>689€</span></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius.</p>
-                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="#" class="btn btn-link" role="button">Voir le programme</a></div>
+                        <div><a href="#" class="btn btn-primary" role="button">Reserver</a> <a href="backhome" class="btn btn-link" role="button">Voir le programme</a></div>
                     </div>
                 </div>
 

@@ -2,8 +2,9 @@
 <routes>
     <route pattern="/" controller="default" action="index"/>
     
-    <!--
-    <route pattern="/hello" controller="default" action="hello"/>
+    <route pattern="/trip" controller="trip" action="add"/>
+    <route pattern="/reponse" controller="trip" action="reponse" methods="post"/>
+<!--    <route pattern="/hello" controller="default" action="hello"/>
     <route pattern="/name/(\w+)" controller="default" action="name" params="name"/>
     <route pattern="/getonly" controller="default" action="getonly"/>
     <route pattern="/postonly" controller="default" action="postonly" methods="post"/>
