@@ -9,12 +9,14 @@ class DefaultController
 
     public function indexAction()
     {
+        $view = './view/default/home.php';
         include './view/template.php';
     }
     
     public function contactAction()
     {
-        include './view/contact.php';
+        $view = './view/default/contact.php';
+        include './view/template.php';
     }
 
 }

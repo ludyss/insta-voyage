@@ -10,7 +10,15 @@ class TripController
     /**
      * 
      */
-    public function index()
+    public function indexAction()
+    {
+
+    }
+
+    /**
+     * 
+     */
+    public function createAction()
     {
         
     }
@@ -18,7 +26,7 @@ class TripController
     /**
      * 
      */
-    public function create()
+    public function addAction()
     {
         
     }
@@ -26,7 +34,7 @@ class TripController
     /**
      * 
      */
-    public function add()
+    public function editAction()
     {
         
     }
@@ -34,7 +42,7 @@ class TripController
     /**
      * 
      */
-    public function edit()
+    public function updateAction()
     {
         
     }
@@ -42,15 +50,7 @@ class TripController
     /**
      * 
      */
-    public function update()
-    {
-        
-    }
-
-    /**
-     * 
-     */
-    public function delete()
+    public function deleteAction()
     {
         
     }
