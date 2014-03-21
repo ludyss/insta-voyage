@@ -11,5 +11,10 @@ class DefaultController
     {
         include './view/template.php';
     }
+    
+    public function contactAction()
+    {
+        include './view/contact.php';
+    }
 
 }

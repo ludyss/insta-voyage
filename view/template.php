@@ -112,7 +112,7 @@
         <section id="sejours">
             <div class="thumbnail-container">
                 <div class="thumbnail">
-                    <img src="assets/img/01.jpg" alt="">
+                    <img src="assets/img/thumbs/01.jpg" alt="">
                     <div class="caption">
                         <h3>Hawaï Break
                             <span class="quality">
@@ -144,7 +144,7 @@
                 </div>
 
                 <div class="thumbnail">
-                    <img src="assets/img/02.jpg" alt="">
+                    <img src="assets/img/thumbs/02.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Tahiti Sunset
                             <span class="quality">
@@ -201,7 +201,7 @@
                 </div>
 
                 <div class="thumbnail">
-                    <img src="assets/img/03.jpg" alt="">
+                    <img src="assets/img/thumbs/03.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Canaries Tour
                             <span class="quality">
@@ -220,7 +220,7 @@
                 </div>
 
                 <div class="thumbnail">
-                    <img src="assets/img/05.jpg" alt="">
+                    <img src="assets/img/thumbs/05.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Maldives
                             <span class="quality">
@@ -241,7 +241,7 @@
                 </div>
 
                 <div class="thumbnail">
-                    <img src="assets/img/04.jpg" alt="">
+                    <img src="assets/img/thumbs/04.jpg" alt="">
                     <div class="caption">
                         <h3 class="title-header">Guadeloupe
                             <span class="quality">
