@@ -37,10 +37,30 @@
 }
 
 #section-contact-form{
-    width: 600px;
+    width: 800px;
+    box-shadow: 6px 0px 10px 0px #ccc;
+    -moz-box-shadow: 6px 0px 10px 0px #000;
+    -webkit-box-shadow: 6px 0px 10px 0px #000;
+    z-index: 500;
 }
 #section-contact-picture {
     width: 400px;
     background: url('../img/contact-picture.png') -200px center no-repeat;
     background-size: auto 100%;
+    box-shadow: 6px 0px 10px 0px #ccc;
+    -moz-box-shadow: 6px 0px 10px 0px #ccc;
+    -webkit-box-shadow: 6px 0px 10px 0px #ccc;
+    z-index: 499;
+    transition: all ease-in-out .3s;
+}
+#section-contact-picture:hover {
+    width: 600px;
+}
+#section-logo-picture {
+    width: 400px;
+    background: url('../img/logo/logo_128.png') center no-repeat;
+    box-shadow: 6px 0px 10px 0px #ccc;
+    -moz-box-shadow: 6px 0px 10px 0px #ccc;
+    -webkit-box-shadow: 6px 0px 10px 0px #ccc;
+    z-index: 498;
 }
