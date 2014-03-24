@@ -4,7 +4,7 @@
  * Description of BaseModel
  *
  */
-class BaseModel
+abstract class BaseModel
 {
 
     /**
@@ -44,11 +44,11 @@ class BaseModel
         $xmlElement = $xml->getElementsByTagName('config');
 
         $this->config = array(
-            'host' => $xmlElement->getAttribute('host'),
-            'database' => $xmlElement->getAttribute('database'),
-            'user' => $xmlElement->getAttribute('user'),
-            'password' => $xmlElement->getAttribute('password'),
-            'charset' => $xmlElement->getAttribute('charset')
+            'host' => $xmlElement->item(0)->getAttribute('host'),
+            'database' => $xmlElement->item(0)->getAttribute('database'),
+            'user' => $xmlElement->item(0)->getAttribute('user'),
+            'password' => $xmlElement->item(0)->getAttribute('password'),
+            'charset' => $xmlElement->item(0)->getAttribute('charset')
         );
     }
 
@@ -80,29 +80,100 @@ class BaseModel
         $this->db = null;
     }
 
-    public function findAll(array $columns = array(), $offset = null, $limit = null)
+    /**
+     * 
+     * @param array $columns
+     * @param type $offset
+     * @param type $limit
+     * @return type
+     */
+    public function findAll(array $columns = array(), $offset = 0, $limit = null)
     {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
 
-        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns) . ' FROM ' . $this->table;
+        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns)
+                . ' FROM ' . $this->table;
+
         $query = $this->db->prepare($sql);
-        
+        $query->execute();
         return $query->fetchAll();
     }
 
+    /**
+     * 
+     * @param type $id
+     * @param array $columns
+     * @return type
+     */
     public function findById($id, array $columns = array())
     {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
 
-        $sql = 'SELECT * FROM `Trip` WHERE `id_trip` = :id';
-        $query = $this->db->prepare($sql);
+        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns)
+                . ' FROM ' . $this->table
+                . ' WHERE ' . $this->primary_key . ' = :id';
 
+        $query = $this->db->prepare($sql);
         $query->execute(array(':id' => $id));
         return $query->fetch();
+    }
+
+    /**
+     * 
+     * @param array $data
+     */
+    public function save(array $data)
+    {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+        
+        if (in_array($this->primary_key, array_keys($data))) {
+            $this->update($data);
+        } else {
+            $this->insert($data);
+        }
+    }
+
+    /**
+     * 
+     * @param array $data
+     * @return type
+     */
+    protected function update(array $data)
+    {
+        $sql = 'UPDATE ' . $this->table . ' SET ';
+
+        $columns = array_keys($data);
+        foreach ($columns as $column) {
+            if ($column != $this->primary_key) {
+                $sql .= $column . ' = :' . $column;
+                if (end($columns) != $column) {
+                    $sql .= ', ';
+                }
+            }
+        }
+
+        $sql .= ' WHERE ' . $this->primary_key . ' = :' . $this->primary_key;
+        $query = $this->db->prepare($sql);
+        return $query->execute($data);
+    }
+
+    /**
+     * 
+     * @param array $data
+     * @return type
+     */
+    protected function insert(array $data)
+    {
+        $sql = 'INSERT INTO ' . $this->table . ' (' . implode(',', array_keys($data)) . ') VALUES (:' . implode(',:', array_keys($data)) . ')';
+
+        $query = $this->db->prepare($sql);
+        return $query->execute($data);
     }
 
 }
