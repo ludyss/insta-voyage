@@ -1,10 +1,13 @@
 <?php
 
+require_once './controller/BaseController.php';
+require_once './model/TripModel.php';
+
 /**
  * Description of TripController
  *
  */
-class TripController
+class TripController extends BaseController
 {
 
     /**
@@ -12,7 +15,7 @@ class TripController
      */
     public function indexAction()
     {
-
+        
     }
 
     /**
@@ -20,7 +23,8 @@ class TripController
      */
     public function createAction()
     {
-        
+        $view = './view/trip/create.php';
+        include './view/admin/template.php';
     }
 
     /**
@@ -28,7 +32,15 @@ class TripController
      */
     public function addAction()
     {
+
+        $trip = array(
+            'name' => $this->inputPost('name'),
+            'quality' => $this->inputPost('quality'),
+            'description' => $this->inputPost('description'),
+        );
         
+        $trip_model = new TripModel('trip', 'id_trip');
+        $trip_model->save($trip);
     }
 
     /**
