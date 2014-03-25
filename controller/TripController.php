@@ -29,48 +29,48 @@ class TripController {
     /**
      * 
      */
-    public function index() {
+    public function indexAction()
+    {
+
+    }
+
+    /**
+     * 
+     */
+    public function createAction()
+    {
         
     }
 
     /**
      * 
      */
-    public function create() {
+    public function addAction()
+    {
         
     }
 
     /**
      * 
      */
-    public function addAction() {
-        include './view/addtrip.php';
-    }
-
-    /**
-     * 
-     */
-    public function reponseAction() {
-        echo 'test';
-        $this->connection();
-        if ($this->savelocation($_POST['lieu'])) {
-            echo 'Super !';
-        } else {
-            echo 'Snif :\'(';
-        }
-    }
-
-    /**
-     * 
-     */
-    public function update() {
+    public function editAction()
+    {
         
     }
 
     /**
      * 
      */
-    public function delete() {
+    public function updateAction()
+    {
+        
+    }
+
+    /**
+     * 
+     */
+    public function deleteAction()
+    {
         
     }
 

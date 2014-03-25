@@ -1,0 +1,22 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Spacers
+===========================================================*/
+.spacer {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+}
+.spacer.spacer-thin {
+    height: 8px;
+}
+
+.spacer.spacer-wide {
+    height: 32px;
+}

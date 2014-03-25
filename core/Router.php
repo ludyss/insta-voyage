@@ -36,7 +36,6 @@ class Router
     /**
      * Construct
      * 
-     * @param string $domain The uri base to remove
      */
     public function __construct()
     {

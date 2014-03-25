@@ -1,40 +1,42 @@
 <?php
 
+require './model/BaseModel.php';
+
 /**
  * Description of TripModel
  *
  */
-class TripModel {
+class TripModel extends BaseModel
+{
 
-    protected $db;
+    public function findAll(array $columns = array(), $offset = null, $limit = null)
+    {
+        $sql = 'SELECT * FROM `Trip`';
+        
+        
+        
+        $query = $this->db->prepare($sql);
 
-    public function connection() {
-        try {
-            $this->db = new PDO("mysql:host=localhost; dbname=insta-voyage", 'root', '');
-            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            $this->db->exec('SET NAMES "UTF8"');
-        } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
-        }
+        $query->execute(array(':id' => $id));
+        return $query->fetch();
     }
-    public function savelocation($lieu) {
-        $sql = 'INSERT into `location`(`id_country`, `location_name`) VALUES (\'\','.$lieu.')';
-        return $this->db->exec($sql);
+
+    public function findById($id, array $columns = array())
+    {
+        $sql = 'SELECT * FROM `Trip` WHERE `id_trip` = :id';
+        $query = $this->db->prepare($sql);
+
+        $query->execute(array(':id' => $id));
+        return $query->fetch();
     }
-    public function findAll($offset = null, $limit = null) {
+
+    public function save(array $trip)
+    {
         
     }
 
-    public function findById($id) {
-        
-    }
-
-    public function save(array $trip) {
-        
-    }
-
-    public function deleteById($id, $hard = false) {
+    public function deleteById($id, $hard = false)
+    {
         
     }
 

@@ -1,1 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <config host="localhost" database="insta-voyage" user="root" password="root" charset="UTF-8"/>
+</database>

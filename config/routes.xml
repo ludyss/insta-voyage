@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routes>
     <route pattern="/" controller="default" action="index"/>
+    <route pattern="/contact" controller="default" action="contact"/>
+    <route pattern="/video" controller="video" action="getVideoList" methods="post"/>
+    <route pattern="/admin" controller="admin" action="index"/>
+        
+    <route pattern="/admin/sejours" controller="trip" action="index"/>
+    <route pattern="/admin/sejours/nouveau" controller="trip" action="create" methods="get"/>
+    <route pattern="/admin/sejours/ajouter" controller="trip" action="add" methods="post"/>
+    <route pattern="/admin/sejours/(\d+)" controller="trip" action="show" params="id" methods="get"/>
+    <route pattern="/admin/sejours/(\d+)/modifier" controller="trip" action="edit" params="id" methods="get"/>
+    <route pattern="/admin/sejours/sauvegarder" controller="trip" action="update" methods="post"/>
+    <route pattern="/admin/sejours/supprimer" controller="trip" action="delete" methods="post"/>
+        
+    <route pattern="/admin/formules" controller="formula" action="index"/>
+    <route pattern="/admin/formules/nouveau" controller="formula" action="create" methods="get"/>
+    <route pattern="/admin/formules/ajouter" controller="formula" action="add" methods="post"/>
+    <route pattern="/admin/formules/(\d+)" controller="formula" action="show" params="id" methods="get"/>
+    <route pattern="/admin/formules/(\d+)/modifier" controller="formula" action="edit" params="id" methods="get"/>
+    <route pattern="/admin/formules/sauvegarder" controller="formula" action="update" methods="post"/>
+    <route pattern="/admin/formules/supprimer" controller="formula" action="delete" methods="post"/>
     
-    <route pattern="/trip" controller="trip" action="add"/>
-    <route pattern="/reponse" controller="trip" action="reponse" methods="post"/>
-<!--    <route pattern="/hello" controller="default" action="hello"/>
-    <route pattern="/name/(\w+)" controller="default" action="name" params="name"/>
-    <route pattern="/getonly" controller="default" action="getonly"/>
-    <route pattern="/postonly" controller="default" action="postonly" methods="post"/>
-    -->
+    <!--<route pattern="/programme/(+d)" controller="trip" action="show" params="id"/>-->
+    <route pattern="/programme" controller="default" action="programme"/>
 </routes>
