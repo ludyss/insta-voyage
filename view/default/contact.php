@@ -83,8 +83,14 @@
         </div>
     </form>
 </section>
-<section id="section-contact-picture"></section>
-<section id="section-logo-picture"><p class="logo-txt">Cross<span>Island</span></p>
+<section id="section-contact-picture" class="inverse">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="title-header">Nos locaux</h2>
+        </div>
+    </div>
+</section>
+<section id="section-logo-picture"><H1 >Cross<span class="logo-txt">Island</span></H1>
 </section>
 
 

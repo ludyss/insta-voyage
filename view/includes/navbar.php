@@ -13,7 +13,7 @@
             <li class=""><a href="#sejours">Séjours</a></li>
             <li class=""><a href="#hotels">Hôtels</a></li>
             <li class=""><a href="#croisieres">Croisières</a></li>
-            <li class=""><a href="/contact">Contact</a></li>
+            <li class=""><a href="#contact" id="contact">Contact</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>

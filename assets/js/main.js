@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
+    var navState = "main";
 
     /*! 
      * Full screen section
@@ -97,5 +98,16 @@ jQuery(document).ready(function($) {
             $('video source').attr('src', 'assets/video/' + list[video]);
             $("video").load().play();
         }
+    });
+    $('#contact').click(function(event) {
+        $.ajax({
+            method: 'get',
+            url: '/contact',
+            success: function(response) {
+                alert(response);
+            }
+        });
+        navState = "contact";
+        event.preventDefault();
     });
 });
