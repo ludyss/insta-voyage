@@ -58,12 +58,23 @@ jQuery(document).ready(function($) {
      * Scroll to inner anchor
      */
     $('a').click(function(event) {
-        var target = $(this).attr('href');
-        if (target[0] === '#') {
-            $("html, body").stop().animate({
-                scrollLeft: $(target).offset().left
-            }, 300);
-            event.preventDefault();
+        if (navState == "contact"){/*
+                    $.ajax({
+            method: 'get',
+            url: '/contact',
+            success: function(response) {
+                $(".ajax-container").html(response);
+                    navState = "contact";
+                }
+            });*/
+        }else{
+            var target = $(this).attr('href');
+            if (target[0] === '#') {
+                $("html, body").stop().animate({
+                    scrollLeft: $(target).offset().left
+                }, 300);
+                event.preventDefault();
+            }
         }
     });
 
@@ -104,10 +115,10 @@ jQuery(document).ready(function($) {
             method: 'get',
             url: '/contact',
             success: function(response) {
-                alert(response);
+                $(".ajax-container").html(response);
+                navState="contact";
             }
         });
-        navState = "contact";
         event.preventDefault();
     });
 });

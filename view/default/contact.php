@@ -1,14 +1,15 @@
-<section id="section-contact-map">
+<section id="section-contact-map" class=" animated bounceInDown">
+    &nbsp;
     <div class='pin bounce'></div>
     <div class='pulse'></div>
 </section>
 
-<section id="section-contact-about">
+<section id="section-contact-about" class="animated bounceInUp">
     <div class="row">
         <div class="col-md-12">
             <h2 class="title-header">Qui sommes nous ?</h2>
-            <p>CrossIsland est une agence de voyage spécialisée dans les circuit touristiques.</p>
-            <p>CrossIsland nait en 2010 de la coopération entre la société WebTimes spécialiste du web design et la société Density Tech expérimentée dans le développement des progiciels de gestion intégré.</p>
+            <p>Cross Island est une agence de voyage spécialisée dans les circuit touristiques.</p>
+            <p>Cross Island nait en 2010 de la coopération entre la société WebTimes spécialiste du web design et la société Density Tech expérimentée dans le développement des progiciels de gestion intégré.</p>
             <p>N'hésitez pas à entrer en contact avec nous, que ce soit pour intervenir lors d'une émission en direct, poser vos questions, donner votre témoignage, pour une demande de renseignements ou pour obtenir un rendez-vous.</p>
         </div>
         <div class="col-md-12">
@@ -32,10 +33,9 @@
             <i class="fa fa-linkedin-square fa-3x"></i>
         </div>
     </div>
-</div>
 </section>
 
-<section id="section-contact-form" class="inverse">
+<section id="section-contact-form" class="inverse animated bounceInLeft">
     <div class="row">
         <div class="col-md-12">
             <h2 class="title-header">Envoyez nous un E-mail </h2>
@@ -90,7 +90,7 @@
         </div>
     </div>
 </section>
-<section id="section-logo-picture"><H1 >Cross<span class="logo-txt">Island</span></H1>
+<section id="section-logo-picture"><H1><span class="logo-txt">Cross Island</span></H1>
 </section>
 
 
