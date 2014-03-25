@@ -1,0 +1,45 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Stylesheets importations
+===========================================================*/
+@import 'vendor/bootstrap.min.css';
+@import 'vendor/font-awesome.min.css';
+@import 'vendor/jquery-ui.css';
+
+/* Fonts
+===========================================================*/
+@font-face {
+    font-family: 'volkhovbold_italic';
+    src: url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.eot');
+    src: url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.woff') format('woff'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.ttf') format('truetype'),
+        url('../fonts/Volkhov-BoldItalic/volkhov-bolditalic-webfont.svg#volkhovbold_italic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Body
+===========================================================*/
+body {
+    padding-top: 50px;
+}
+
+/* Navbar
+===========================================================*/
+.navbar-default .navbar-brand {
+    font-family: 'volkhovbold_italic', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Page headers
+===========================================================*/
+.page-header .btn.pull-right {
+    margin-top: 20px;
+    margin-left: 10px; 
+}

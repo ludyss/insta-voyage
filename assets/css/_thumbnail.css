@@ -1,0 +1,100 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Thumbnails
+===========================================================*/
+.thumbnail-container {
+    width: 100%;
+}
+
+.thumbnail {
+    float: left;
+    width: 440px;
+    padding: 30px 20px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 250px;
+}
+
+.thumbnail .caption {
+    position: relative;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.thumbnail:hover .caption {
+    top: -150px;
+    height: 400px;
+}
+
+.thumbnail .caption h3 {
+    padding: 15px 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #00a6e4;
+}
+
+.thumbnail .caption h3 .quality {
+    float: right;
+    color: #ffab00;
+}
+
+.thumbnail .price {
+    float: right;
+    color: #ffab00;
+    font-size: 2.2em;
+}
+
+.thumbnail .price small {
+    color: #ccc;
+    text-align: right;
+    font-size: 10px;
+    display: block;
+}
+
+.thumbnail .formula {
+    opacity: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s ease;
+}
+
+.thumbnail .formula ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnail .formula ul li {
+    display: block;
+    clear: both;
+    vertical-align: middle;
+    min-height: 30px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.thumbnail .formula ul li + li {
+    border-top: 1px solid #eef;
+}
+
+.thumbnail .formula .price {
+    font-size: 1em;
+}
+
+.thumbnail:hover .formula {
+    opacity: 1;
+    overflow: visible;
+    height: auto;
+}

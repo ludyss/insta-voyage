@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="favicon.ico" type="image/x-icon"> 
         <link rel="stylesheet" href="assets/css/main.css">
-        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
 
     <body data-spy="scroll" data-target="#navbar-collapse">
@@ -35,8 +35,8 @@
 
         <?php include $view;?>
 
-        <script src="assets/js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="/assets/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>
