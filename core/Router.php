@@ -101,13 +101,14 @@ class Router
      */
     public function run()
     {
-        try {
+//        try {
             $match = $this->findRoute($this->request);
             $this->callRoute($match);
-        } catch (\RuntimeException $e) {
-            include './404.html';
-            die;
-        }
+//        } catch (\RuntimeException $e) {
+//        header("HTTP/1.0 404 Not Found");
+//            include './404.html';
+//            die;
+//        }
     }
 
     /**

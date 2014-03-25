@@ -11,7 +11,15 @@
     <route pattern="/admin/sejours/(\d+)" controller="trip" action="show" params="id" methods="get"/>
     <route pattern="/admin/sejours/(\d+)/modifier" controller="trip" action="edit" params="id" methods="get"/>
     <route pattern="/admin/sejours/sauvegarder" controller="trip" action="update" methods="post"/>
-    <route pattern="/admin/sejours/supprimer" controller="trip" action="delete" methods="post"/>
+    <route pattern="/admin/sejours/(\d+)/supprimer" controller="trip" action="delete" params="id" methods="get"/>
+        
+    <route pattern="/admin/etapes" controller="trip" action="index"/>
+    <route pattern="/admin/etapes/nouveau" controller="trip" action="create" methods="get"/>
+    <route pattern="/admin/etapes/ajouter" controller="trip" action="add" methods="post"/>
+    <route pattern="/admin/etapes/(\d+)" controller="trip" action="show" params="id" methods="get"/>
+    <route pattern="/admin/etapes/(\d+)/modifier" controller="trip" action="edit" params="id" methods="get"/>
+    <route pattern="/admin/etapes/sauvegarder" controller="trip" action="update" methods="post"/>
+    <route pattern="/admin/etapes/(\d+)/supprimer" controller="trip" action="delete" params="id" methods="get"/>
         
     <route pattern="/admin/formules" controller="formula" action="index"/>
     <route pattern="/admin/formules/nouveau" controller="formula" action="create" methods="get"/>

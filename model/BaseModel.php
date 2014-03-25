@@ -93,8 +93,7 @@ abstract class BaseModel
             $this->init();
         }
 
-        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns)
-                . ' FROM ' . $this->table;
+        $sql = 'SELECT ' . (empty($columns) ? '*' : implode(',', $columns)) . ' FROM ' . $this->table;
 
         $query = $this->db->prepare($sql);
         $query->execute();
@@ -113,7 +112,7 @@ abstract class BaseModel
             $this->init();
         }
 
-        $sql = 'SELECT ' . empty($columns) ? '*' : implode(',', $columns)
+        $sql = 'SELECT ' . (empty($columns) ? '*' : implode(',', $columns))
                 . ' FROM ' . $this->table
                 . ' WHERE ' . $this->primary_key . ' = :id';
 
@@ -131,7 +130,7 @@ abstract class BaseModel
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
-        
+
         if (in_array($this->primary_key, array_keys($data))) {
             $this->update($data);
         } else {
@@ -144,8 +143,12 @@ abstract class BaseModel
      * @param array $data
      * @return type
      */
-    protected function update(array $data)
+    public function update(array $data)
     {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
         $sql = 'UPDATE ' . $this->table . ' SET ';
 
         $columns = array_keys($data);
@@ -168,12 +171,35 @@ abstract class BaseModel
      * @param array $data
      * @return type
      */
-    protected function insert(array $data)
+    public function insert(array $data)
     {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
         $sql = 'INSERT INTO ' . $this->table . ' (' . implode(',', array_keys($data)) . ') VALUES (:' . implode(',:', array_keys($data)) . ')';
 
         $query = $this->db->prepare($sql);
-        return $query->execute($data);
+        $query->execute($data);
+        
+        return $this->db->lastInsertId();
+    }
+
+    /**
+     * 
+     * @param int $id
+     * @return type
+     */
+    public function deleteById($id)
+    {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
+        $sql = 'DELETE FROM ' . $this->table . ' WHERE ' . $this->primary_key . ' = :' . $this->primary_key;
+
+        $query = $this->db->prepare($sql);
+        return $query->execute(array(':' . $this->primary_key => $id));
     }
 
 }

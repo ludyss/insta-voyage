@@ -11,16 +11,17 @@
 @import 'vendor/jquery-ui.css';
 @import 'vendor/animate.min.css';
 
-@import 'fonts.css';
-@import 'spacer.css';
-@import 'navbar.css';
-@import 'aside.css';
-@import 'thumbnail.css';
-@import 'slider.css';
-@import 'langbar.css';
-@import 'form.css';
-@import 'pages.css';
-@import 'pins.css';
+@import '_fonts.css';
+@import '_spacer.css';
+@import '_navbar.css';
+@import '_aside.css';
+@import '_thumbnail.css';
+@import '_slider.css';
+@import '_langbar.css';
+@import '_form.css';
+@import '_pages.css';
+@import '_pins.css';
+
 /* Horizontal Scrolling
 ===========================================================*/
 html {
