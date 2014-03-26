@@ -46,14 +46,14 @@
         <div class="col-md-6">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="nom">Nom </label> 
-                    <input type="text" class="form-control" id="nom" placeholder="Nom"> 
+                    <label for="nom">Nom </label>
+                    <input type="text" class="form-control" id="nom" placeholder="Nom">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="prenom">Prénom</label> 
-                    <input type="text" class="form-control" id="nom" placeholder="Prénom"> 
+                    <label for="prenom">Prénom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Prénom">
                 </div>
             </div>
             <div class="col-md-12">

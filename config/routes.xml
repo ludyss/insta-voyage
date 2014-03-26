@@ -25,8 +25,10 @@
     <route pattern="/admin/formules" controller="formula" action="index"/>
     <route pattern="/admin/formules/nouveau" controller="formula" action="create" methods="get"/>
     <route pattern="/admin/formules/ajouter" controller="formula" action="add" methods="post"/>
-    <route pattern="/admin/formules/(\d+)" controller="formula" action="show" params="id" methods="get"/>
     <route pattern="/admin/formules/(\d+)/modifier" controller="formula" action="edit" params="id" methods="get"/>
     <route pattern="/admin/formules/sauvegarder" controller="formula" action="update" methods="post"/>
-    <route pattern="/admin/formules/supprimer" controller="formula" action="delete" methods="post"/>
+    <route pattern="/admin/formules/(\d+)/supprimer" controller="formula" action="delete" methods="get" params="id" />
+   
+    <!--<route pattern="/programme/(+d)" controller="trip" action="show" params="id"/>-->
+    <route pattern="/programme" controller="default" action="programme"/>
 </routes>

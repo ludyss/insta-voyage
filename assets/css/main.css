@@ -21,6 +21,7 @@
 @import '_form.css';
 @import '_pages.css';
 @import '_pins.css';
+@import '_programme.css';
 
 /* Horizontal Scrolling
 ===========================================================*/
@@ -52,7 +53,7 @@ h1,h2,h3,h4,h5,h6{
     border-bottom: 2px solid #00a6e4;
 }
 
-body > .ajax-container > section {
+body > section {
     position: relative;
     float: left;
     z-index: 500;
@@ -61,10 +62,8 @@ body > .ajax-container > section {
     padding: 50px 20px 20px 20px;
     height: 100%;
 }
-.ajax-container{
-    height: 100%;
-}
-body > .ajax-container > section.inverse {
+
+body > section.inverse {
     background-color: #3276B1;
     color: #fff;
 }
