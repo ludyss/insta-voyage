@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,h6{
     border-bottom: 2px solid #00a6e4;
 }
 
-body > section {
+body > .ajax-container > section {
     position: relative;
     float: left;
     z-index: 500;
@@ -61,8 +61,10 @@ body > section {
     padding: 50px 20px 20px 20px;
     height: 100%;
 }
-
-body > section.inverse {
+.ajax-container{
+    height: 100%;
+}
+body > .ajax-container > section.inverse {
     background-color: #3276B1;
     color: #fff;
 }

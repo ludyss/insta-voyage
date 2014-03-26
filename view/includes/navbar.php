@@ -4,7 +4,7 @@
             <span class="sr-only">Toggle navigation</span>
             <span class="fa fa-bars"></span>
         </button>
-        <a class="navbar-brand toggle-sidebar" href="#"><img src="assets/img/logo/logo_64.png" alt="">Cross<span>Island</span></a>
+        <a class="navbar-brand toggle-sidebar" href="#"><img src="assets/img/logo/logo_64.png" alt=""><span>Cross<span> Island</span></a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -13,7 +13,7 @@
             <li class=""><a href="#sejours">Séjours</a></li>
             <li class=""><a href="#hotels">Hôtels</a></li>
             <li class=""><a href="#croisieres">Croisières</a></li>
-            <li class=""><a href="/contact">Contact</a></li>
+            <li class=""><a href="contact" id="contact">Contact</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>

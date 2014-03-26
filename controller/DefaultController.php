@@ -15,8 +15,8 @@ class DefaultController
     
     public function contactAction()
     {
-        $view = './view/default/contact.php';
-        include './view/template.php';
+        include './view/default/contact.php';
+        //include './view/template.php';
     }
 
 }
