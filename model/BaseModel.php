@@ -121,9 +121,6 @@ abstract class BaseModel
         return $query->fetch();
     }
 
-<<<<<<< HEAD
-
-=======
     /**
      * 
      * @param array $data
@@ -205,5 +202,4 @@ abstract class BaseModel
         return $query->execute(array(':' . $this->primary_key => $id));
     }
 
->>>>>>> a406a56215acba1b71053c6497c0c43fb82f2288
 }
