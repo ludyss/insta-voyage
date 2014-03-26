@@ -181,7 +181,7 @@ abstract class BaseModel
 
         $query = $this->db->prepare($sql);
         $query->execute($data);
-        
+
         return $this->db->lastInsertId();
     }
 
