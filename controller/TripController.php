@@ -2,6 +2,7 @@
 
 require_once './controller/BaseController.php';
 require_once './model/TripModel.php';
+require_once './model/StepModel.php';
 
 /**
  * Description of TripController
@@ -55,6 +56,8 @@ class TripController extends BaseController
     {
         $trip_model = new TripModel('trip', 'id_trip');
         $trip = $trip_model->findById($id);
+        $step_model = new StepModel('trip_step', 'id_trip_step');
+        $steps = $step_model->findByTripId($id);
 
         $view = './view/trip/show.php';
         include './view/admin/template.php';

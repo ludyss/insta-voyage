@@ -25,15 +25,16 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <?php include './view/includes/navbar.php';?>
-        <?php include './view/includes/aside.php';?>
-        <?php include './view/includes/langbar.php';?>
-        
+        <?php include './view/includes/navbar.php'; ?>
+        <?php include './view/includes/aside.php'; ?>
+        <?php include './view/includes/langbar.php'; ?>
+
         <div id="nav-arrow">
             <i class="fa fa-chevron-right  fa-5x"></i>
         </div>
-
-        <?php include $view;?>
+        <div class="ajax-container">
+            <?php include $view; ?>
+        </div>
 
         <script src="/assets/js/vendor/jquery-1.10.2.min.js"></script>
         <script src="/assets/js/plugins.js"></script>

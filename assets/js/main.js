@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
+    var navState = "main";
 
     /*! 
      * Full screen section
@@ -57,12 +58,23 @@ jQuery(document).ready(function($) {
      * Scroll to inner anchor
      */
     $('a').click(function(event) {
-        var target = $(this).attr('href');
-        if (target[0] === '#') {
-            $("html, body").stop().animate({
-                scrollLeft: $(target).offset().left
-            }, 300);
-            event.preventDefault();
+        if (navState == "contact"){/*
+                    $.ajax({
+            method: 'get',
+            url: '/contact',
+            success: function(response) {
+                $(".ajax-container").html(response);
+                    navState = "contact";
+                }
+            });*/
+        }else{
+            var target = $(this).attr('href');
+            if (target[0] === '#') {
+                $("html, body").stop().animate({
+                    scrollLeft: $(target).offset().left
+                }, 300);
+                event.preventDefault();
+            }
         }
     });
 
@@ -97,5 +109,16 @@ jQuery(document).ready(function($) {
             $('video source').attr('src', 'assets/video/' + list[video]);
             $("video").load().play();
         }
+    });
+    $('#contact').click(function(event) {
+        $.ajax({
+            method: 'get',
+            url: '/contact',
+            success: function(response) {
+                $(".ajax-container").html(response);
+                navState="contact";
+            }
+        });
+        event.preventDefault();
     });
 });

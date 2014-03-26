@@ -40,4 +40,24 @@ abstract class BaseController
         exit;
     }
 
+    /**
+     * Convert "d/m/Y" date to "Y-m-d" date
+     * 
+     * @param type $date_string
+     */
+    protected function stringToSQL($date_string)
+    {
+        return implode('-', array_reverse(explode('/', $date_string)));
+    }
+
+    /**
+     * Convert SQL date to DateTime
+     * 
+     * @param type $date_string
+     */
+    protected function SQLToDate($sql_date)
+    {
+        return new DateTime($sql_date);
+    }
+
 }

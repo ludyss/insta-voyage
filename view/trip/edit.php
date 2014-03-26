@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-header clearfix">
-                <h2 class="pull-left">Nouveau séjour</h2>
+                <h2 class="pull-left">Modifier : <?php echo $trip['name']; ?></h2>
                 <a class="btn btn-primary pull-right" href="/admin/sejours">Annuler</a>
             </div>
             <div class="well">
-                <form action="/admin/sejours/sauvegarder" method="POST" accept-charset="UTF-8">
+                <form action="/admin/sejours/sauvegarder" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                     <input type="hidden" name="id_trip" value="<?php echo $trip['id_trip']; ?>">
 
                     <div class="form-group">
