@@ -9,11 +9,11 @@
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class=""><a href="#accueil"><i class="fa fa-home"></i></a></li>
+            <li class=""><a href="#accueil"> <i class="fa fa-home"></i> </a></li>
             <li class=""><a href="#sejours">Séjours</a></li>
-            <li class=""><a href="#hotels">Hôtels</a></li>
-            <li class=""><a href="#croisieres">Croisières</a></li>
-            <li class=""><a href="contact" id="contact">Contact</a></li>
+            <li class=""><a href="#hotels">Nos guides</a></li>
+            <li class=""><a href="#croisieres">A propos</a></li>
+            <li class=""><a href="/contact">Contact</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
