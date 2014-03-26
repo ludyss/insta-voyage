@@ -1,0 +1,281 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Programm section
+===========================================================*/
+
+#section-program-map {
+    width: 400px;
+    //background: url('../img/programme-img.png') center center no-repeat;
+    background: url('../img/thumbs/01.jpg') center center no-repeat;
+    background-position:right ;
+}
+
+/* Thumbnails
+===========================================================*/
+.thumbnailProgram-container {
+    width: 100%;
+}
+.thumbnailProgram p {text-align: justify;padding: 2px}
+.thumbnailProgram h4 {text-align: left;}
+.thumbnailProgram  a {color:#4cae4c;font-weight: bold;}
+
+    
+.thumbnailProgram {
+    float: left;
+    width: 350px;
+    padding: 30px 20px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    /*background: orange*/
+}
+
+.thumbnailProgram img {
+    width: 100%;
+    height: 250px;
+}
+
+.thumbnailProgram .caption {
+    position: relative;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    /*transition: all .2s ease-out;*/
+    
+}
+
+/*.thumbnailProgram:hover .caption {
+    top: -150px;
+    height: 400px;
+}*/
+
+.thumbnailProgram .caption h3 {
+    padding: 15px 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #00a6e4;
+}
+
+.thumbnailProgram .caption h3 .quality {
+    float: right;
+    color: #ffab00;
+}
+
+.thumbnailProgram .price {
+    float: right;
+    color: #ffab00;
+    font-size: 2.2em;
+}
+
+.thumbnailProgram .price small {
+    color: #ccc;
+    text-align: right;
+    font-size: 10px;
+    display: block;
+}
+
+.thumbnailProgram .formula {
+/*    opacity: 0;
+    overflow: hidden;*/
+    height: 250px;
+    /*transition: all 1s ease;*/
+}
+
+.thumbnailProgram .formula ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnailProgram .formula ul li {
+    display: block;
+    clear: both;
+    vertical-align: middle;
+    min-height: 30px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.thumbnailProgram .formula ul li + li {
+    border-top: 1px solid #eef;
+}
+
+.thumbnailProgram .formula .price {
+    font-size: 1em;
+}
+
+/*.thumbnailProgram:hover .formula {
+    opacity: 1;
+    overflow: visible;
+    height: auto;
+}*/
+
+
+
+/* Thumbnails Step
+===========================================================*/
+.thumbnailProgram-container {
+    width: 100%;
+}
+.thumbnailStep p {text-align: justify;padding: 0px 2px }
+.thumbnailStep h4 {text-align: left;}
+.thumbnailStep .captionHover2 span {float: right}   
+.thumbnailStep {
+    float: left;
+    width: 600px;
+    padding: 30px 20px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    background: #00a6e4;
+    transition: width ease 1s;
+    transition-delay: 0s;
+}
+
+.thumbnailStep .captionHover img {
+    /*margin-left: 5px;*/
+    width: 490px;
+    height: 320px;
+}
+.thumbnailStep .captionHover2 img {
+    width: 100%;
+    height: 80px;
+}
+
+.thumbnailStep .caption {
+    position: relative;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    /*transition: all .2s ease-out;*/
+    
+}
+
+/*.thumbnailProgram:hover .caption {
+    top: -150px;
+    height: 400px;
+}*/
+
+.thumbnailStep .caption h3 {
+    padding: 15px 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #00a6e4;
+}
+
+.thumbnailStep .caption h3 .quality {
+    float: right;
+    color: #ffab00;
+}
+
+.thumbnailStep .price {
+    float: right;
+    color: #ffab00;
+    font-size: 2.2em;
+}
+
+.thumbnailStep .price small {
+    color: #ccc;
+    text-align: right;
+    font-size: 10px;
+    display: block;
+}
+
+.thumbnailStep .formula {
+/*    opacity: 0;
+    overflow: hidden;*/
+    height: 250px;
+    /*transition: all 1s ease;*/
+}
+
+.thumbnailStep .formula ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumbnailStep .formula ul li {
+    display: block;
+    clear: both;
+    vertical-align: middle;
+    min-height: 30px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.thumbnailStep .formula ul li + li {
+    border-top: 1px solid #eef;
+}
+
+.thumbnailStep .formula .price {
+    font-size: 1em;
+}
+/* Step
+===========================================================*/
+.thumbnailStep .captionHover {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 444px;
+    float: left;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    
+}
+.thumbnailStep .captionHover2 {
+    position: relative;
+    width: 400px;
+    height: 10px;
+    float: left;
+    margin-top:-244px;
+    top: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition: 1s;
+    transition-delay: 0s;
+    height: 0px;
+    opacity: 0.1;
+}
+.thumbnailStep:hover .captionHover2 {
+    margin-left: 300px;
+    margin-top:-444px;
+    height: 444px;
+    padding-left: 10px;
+    opacity: 1;
+}
+.thumbnailStep:hover {
+    width: 900px;
+    
+}
+
+.thumbnailStep .captionHover h3, .thumbnailStep .captionHover2 h3  {
+    padding: 15px 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #00a6e4;
+}
+
+.thumbnailStep .captionHover h3 .quality, .thumbnailStep .captionHover2 h3 .quality {
+    float: right;
+    color: #ffab00;
+}
+
+.imgProgram, .timeProgram{
+    float: left;
+}
+.imgProgram{
+    width: 30%;
+    
+}
+.timeProgram{
+    width: 65%;
+    height: 80px;
+    background-color:#9966FF;
+}

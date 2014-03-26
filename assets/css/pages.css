@@ -1,0 +1,46 @@
+/*!
+ *
+ */
+
+@charset "UTF-8";
+
+/* Accueil section
+===========================================================*/
+#accueil h2 {
+    color: #fff;
+    font-family: 'volkhovbold_italic', serif;
+    font-weight: bold;
+    font-size: 1.7em;
+    font-style: italic;
+}
+
+#accueil .well {
+    background-color: rgba(255,255,255,.9);
+    border: none;
+}
+
+/* Hotels section
+===========================================================*/
+#hotels {
+    width: 440px;
+}
+
+/* Contact section
+===========================================================*/
+#section-contact-map {
+    width: 400px;
+    background: url('../img/contact-map.png') center center no-repeat;
+}
+
+#section-contact-about {
+    width: 600px;
+}
+
+#section-contact-form{
+    width: 600px;
+}
+#section-contact-picture {
+    width: 400px;
+    background: url('../img/contact-picture.png') -200px center no-repeat;
+    background-size: auto 100%;
+}

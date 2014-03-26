@@ -30,7 +30,7 @@
         <?php include './view/includes/langbar.php'; ?>
 
         <div id="nav-arrow">
-            <i class="fa fa-chevron-right fa-5x"></i>
+            <i class="fa fa-chevron-right  fa-5x"></i>
         </div>
         <div class="ajax-container">
             <?php include $view; ?>

@@ -1,10 +1,10 @@
-<section id="section-contact-map" class=" animated fadeInDown">
+<section id="section-contact-map" class=" animated bounceInDown">
     &nbsp;
     <div class='pin bounce'></div>
     <div class='pulse'></div>
 </section>
 
-<section id="section-contact-about" class="animated fadeInUp">
+<section id="section-contact-about" class="animated bounceInUp">
     <div class="row">
         <div class="col-md-12">
             <h2 class="title-header">Qui sommes nous ?</h2>
@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<section id="section-contact-form" class="inverse animated fadeInLeft">
+<section id="section-contact-form" class="inverse animated bounceInLeft">
     <div class="row">
         <div class="col-md-12">
             <h2 class="title-header">Envoyez nous un E-mail </h2>
@@ -46,14 +46,14 @@
         <div class="col-md-6">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="nom">Nom </label> 
-                    <input type="text" class="form-control" id="nom" placeholder="Nom"> 
+                    <label for="nom">Nom </label>
+                    <input type="text" class="form-control" id="nom" placeholder="Nom">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="prenom">Prénom</label> 
-                    <input type="text" class="form-control" id="nom" placeholder="Prénom"> 
+                    <label for="prenom">Prénom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Prénom">
                 </div>
             </div>
             <div class="col-md-12">
