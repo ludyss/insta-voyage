@@ -104,4 +104,9 @@ class TripController extends BaseController
         $this->redirect('/admin/sejours');
     }
 
+    public function reserveAction($id) {
+        //echo " sejour $id";
+        $view = './view/default/reserve.php';
+        include './view/template.php';
+    }
 }
