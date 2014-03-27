@@ -4,19 +4,21 @@
  * Description of DefaultController
  *
  */
-class DefaultController
-{
+class DefaultController {
 
-    public function indexAction()
-    {
+    public function indexAction() {
         $view = './view/default/home.php';
         include './view/template.php';
     }
-    
-    public function contactAction()
-    {
+
+    public function contactAction() {
         include './view/default/contact.php';
         //include './view/template.php';
+    }
+
+    public function programmeAction() {
+        $view = './view/default/programme.php';
+        include './view/template.php';
     }
 
 }
