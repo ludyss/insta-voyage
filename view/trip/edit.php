@@ -17,6 +17,14 @@
                         <label for="trip-price">Qualité</label>
                         <input id="trip-quality" class="form-control" type="number" min="1" max="5" name="quality" value="<?php echo $trip['quality']; ?>" required="required">
                     </div>
+                    <div class="form-group col-md-2">
+                        <label for="trip-cover">Couverture</label>
+                        <select id="trip-cover" class="form-control" value="<?php echo $trip['cover']; ?>" name="cover">
+                            <?php foreach ($pictures as $picture): ?>
+                                <option value="<?php echo $picture['id_picture']; ?>"><?php echo $picture['filename']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="trip-desc">Description</label>
                         <textarea id="trip-desc" class="form-control" rows="8" name="description"><?php echo $trip['description']; ?></textarea>
