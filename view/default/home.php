@@ -1,9 +1,7 @@
 <section id="accueil" class="screen">
-
     <video preload="auto" autoplay="autoplay" loop="loop" muted="muted" class=" animated fadeInDown">
         <source src="assets/video/intro.mp4" type="video/mp4"> 
     </video>
-
     <div class="container">
         <form class="form-inline" action="#" accept-charset="utf-8" method="post" role="search">
             <div class="row">
@@ -359,11 +357,31 @@
             </address>
         </div>
     </div>
-
 </section>
 
 <section id="croisieres">
-
-
-
+    <div class="row">
+        <div class="col-md-12">
+            <h1>À propos de Cross Island</h1>
+            <p>
+                Cross Island® est un site de voyage au parmis tant d'autre, il permet aux
+                voyageurs de réserver et d'obtenir le voyage de leur rêve. Cross Island
+                offre des Séjours fiables et propose une grande variété de choix de voyages.
+            </p>
+            <p>
+                Cross Island comprend également Cross Island for Business,
+                une division dédiée aux entreprises de l’industrie du tourisme permettant
+                aux professionnels d’accéder aux offres spéciales pour entreprise et PME.
+            </p>
+            <h2>Nos Partenaires :</h2>
+            <address>www.airfarewatchdog.com, www.bookingbuddy.com, www.cruisecritic.com,
+                www.everytrail.com, www.familyvacationcritic.com, www.flipkey.com,
+                www.gateguru.com, www.holidaylettings.co.uk, www.holidaywatchdog.com,
+                www.independenttraveler.com, www.jetsetter.com, www.niumba.com,
+                www.onetime.com, www.oyster.com, www.seatguru.com, www.smartertravel.com,
+                www.tingo.com, www.travelpod.com, www.virtualtourist.com, www.whereivebeen.com et
+                www.kuxun.cn.
+            </address>
+        </div>
+    </div>
 </section>

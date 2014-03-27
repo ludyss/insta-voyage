@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
-    var navState = "main";
+    var navState = 0;
 
     /*! 
      * Full screen section
@@ -54,30 +54,6 @@ jQuery(document).ready(function($) {
         event.preventDefault();
     });
 
-    /*! 
-     * Scroll to inner anchor
-     */
-    $('a').click(function(event) {
-        if (navState == "contact"){/*
-                    $.ajax({
-            method: 'get',
-            url: '/contact',
-            success: function(response) {
-                $(".ajax-container").html(response);
-                    navState = "contact";
-                }
-            });*/
-        }else{
-            var target = $(this).attr('href');
-            if (target[0] === '#') {
-                $("html, body").stop().animate({
-                    scrollLeft: $(target).offset().left
-                }, 300);
-                event.preventDefault();
-            }
-        }
-    });
-
     $('#find').click(function(event) {
         $("html, body").stop().animate({
             scrollLeft: $('#sejours').offset().left
@@ -100,7 +76,7 @@ jQuery(document).ready(function($) {
     $("#high-price").html($("#budget-slider").slider("values", 1) + " €");
 
 
-    $.ajax({
+    var bg_video = $.ajax({
         method: 'post',
         url: '/video',
         success: function(response) {
@@ -110,15 +86,31 @@ jQuery(document).ready(function($) {
             $("video").load().play();
         }
     });
-    $('#contact').click(function(event) {
-        $.ajax({
-            method: 'get',
-            url: '/contact',
-            success: function(response) {
-                $(".ajax-container").html(response);
-                navState="contact";
-            }
-        });
+
+
+    /*! 
+     * Load page to inner anchor
+     */
+    $('.navbar-nav a').click(function(event) {
+        var target = $(this).attr('href');
+        if (target[0] === '#') {
+            $("html, body").stop().animate({
+                scrollLeft: $(target).offset().left
+            }, 300);
+        } else {
+            var navbar = "<ul class='nav navbar-nav'><li><a href='./'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
+            $.ajax({
+                method: 'get',
+                url: target,
+                success: function(response) {
+                    $("#navbar-collapse").html(navbar);
+                    $(".ajax-container").html(response);
+                    $("html, body").stop().animate({
+                        scrollLeft: $("#section-contact-map").offset().left
+                    }, 300);
+                }
+            });
+        }
         event.preventDefault();
     });
 });

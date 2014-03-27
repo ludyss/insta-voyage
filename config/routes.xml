@@ -4,6 +4,8 @@
     <route pattern="/contact" controller="default" action="contact"/>
     <route pattern="/video" controller="video" action="getVideoList" methods="post"/>
     <route pattern="/admin" controller="admin" action="index"/>
+    
+    <route pattern="/programme/(\d+)/reserver" controller="trip" action="reserv"/>
         
     <route pattern="/admin/sejours" controller="trip" action="index"/>
     <route pattern="/admin/sejours/nouveau" controller="trip" action="create" methods="get"/>
