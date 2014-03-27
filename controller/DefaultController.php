@@ -25,17 +25,12 @@ class DefaultController {
         $step_model = new StepModel('trip_step', 'id_trip_step');
         $steps = $step_model->findByTripIdWithPicture($id);
         
-        $view = './view/default/home.php';
+        $view = './view/default/program.php';
         include './view/template.php';
     }
 
     public function contactAction() {
         include './view/default/contact.php';
         //include './view/template.php';
-    }
-
-    public function programmeAction() {
-        $view = './view/default/programme.php';
-        include './view/template.php';
     }
 }
