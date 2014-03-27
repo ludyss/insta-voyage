@@ -1,7 +1,9 @@
-<!--section id="section-reserve-desc">
+<section id="section-reserve-img">
     <div class="cover-img">
         <img src="/assets/img/ressources/IMG4.png" alt="">
     </div>
+</section>
+<section id="section-reserve-desc">
     <div class="choose-formula">
         <h1 class="title-header">
             <div class="pull-right"><small class="text-right">à partir de 1489€</small></div>
@@ -59,15 +61,42 @@
             </div>
         </div>
     </div>
-</section-->
-<!--section  class="inverse" id="section-reserve-formules">
+</section>
+<section id="section-reserve-formules">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="title-header">
+            <h1 class="title-header"><small id="formulechoosen">&nbsp; </small><br />
                 Informations personnelles
             </h1>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Pour une réserver, veuillez fournir les informations nécessaire.</p>
+        </div>
+    </div>
+    <form class="form-horizontal" role="form" id="contactForm">
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="nom">Nom </label>
+                    <input type="text" class="form-control" id="nom" placeholder="Nom">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" class="form-control" id="nom" placeholder="Prénom">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="nom" placeholder="email">
+                </div>
+            </div>
+        </div>
+    </form>
 </section>
 <section id="section-reserve-info-user">
 </section>

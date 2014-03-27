@@ -1,8 +1,11 @@
-/*
+
 @charset "UTF-8";
 
 /* contenu cover
-===========================================================
+===========================================================*/
+section#section-reserve-img{
+    padding: 0px;
+}
 #section-reserve-desc > div{
     float: left;
     height: 100%;
@@ -15,12 +18,11 @@
     padding-left: 0;
 }
 /* Image cover
-===========================================================
+===========================================================*/
 .cover-img{
     height: 100%;
     width: 200px;
     overflow: hidden;
-    margin: 0 20px 0 0;
     transition: width ease-in-out .3s;
 }
 .cover-img:hover, .cover-img.click{
