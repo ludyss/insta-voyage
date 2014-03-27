@@ -10,7 +10,11 @@
 ###########
 !.gitkeep
 
+# Config
+########
+config/database.xml
+
 # Assets
-###########
+########
 assets/video
 uploads
