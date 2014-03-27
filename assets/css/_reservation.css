@@ -1,0 +1,42 @@
+/*
+@charset "UTF-8";
+
+/* contenu cover
+===========================================================
+#section-reserve-desc > div{
+    float: left;
+    height: 100%;
+}
+#section-reserve-desc > div.choose-formula{
+    width: 600px;
+}
+#section-reserve-desc{
+    height: 100%;
+    padding-left: 0;
+}
+/* Image cover
+===========================================================
+.cover-img{
+    height: 100%;
+    width: 200px;
+    overflow: hidden;
+    margin: 0 20px 0 0;
+    transition: width ease-in-out .3s;
+}
+.cover-img:hover, .cover-img.click{
+    width: 450px;
+}
+.cover-img > img{
+    height: 100%;
+    width: auto;
+    margin: 0 0 0 -30%;
+    overflow: hidden;
+}
+.quality-right {
+    float: right;
+    color: #ffab00;
+    clear: left;
+}
+/* Choose type
+===========================================================*/
+.choose-formula-box{}

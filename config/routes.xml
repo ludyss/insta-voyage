@@ -4,9 +4,6 @@
     <route pattern="/contact" controller="default" action="contact"/>
     <route pattern="/video" controller="video" action="getVideoList" methods="post"/>
     <route pattern="/admin" controller="admin" action="index"/>
-    
-    <route pattern="/sejour/(\d+)(?:/(\w+))?" controller="default" action="program" params="id"/>
-    <route pattern="/sejour/(\d+)/reserver" controller="default" action="reservation"/>
         
     <route pattern="/admin/sejours" controller="trip" action="index"/>
     <route pattern="/admin/sejours/nouveau" controller="trip" action="create" methods="get"/>
@@ -31,4 +28,8 @@
     <route pattern="/admin/formules/(\d+)/modifier" controller="formula" action="edit" params="id" methods="get"/>
     <route pattern="/admin/formules/sauvegarder" controller="formula" action="update" methods="post"/>
     <route pattern="/admin/formules/(\d+)/supprimer" controller="formula" action="delete" methods="get" params="id" />
+   
+    <!--<route pattern="/programme/(\d+)" controller="trip" action="show" params="id"/>-->
+    <route pattern="/sejours" controller="default" action="programme"/>
+    <route pattern="/sejours/(\d+)/reserver" controller="trip" action="reserve" params="id" />
 </routes>
