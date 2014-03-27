@@ -55,6 +55,7 @@ class StepController extends BaseController
     {
         $step_model = new StepModel('trip_step', 'id_trip_step');
         $step = $step_model->findByIdWithPicture($id);
+        
         $picture_model = new PictureModel('picture', 'id_picture');
         $pictures = $picture_model->findByTripStepId($id);
 

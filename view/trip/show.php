@@ -6,8 +6,11 @@
                 <a class="btn btn-warning pull-right" href="/admin/sejours/<?php echo $trip['id_trip']; ?>/modifier">Modifier</a>
                 <a class="btn btn-danger pull-right" href="/admin/sejours/<?php echo $trip['id_trip']; ?>/supprimer">Supprimer</a>
             </div>
-            <p><?php echo $trip['description']; ?></p>
-
+            <div class="clearfix">
+                <img class="img-thumbnail pull-left" src="/uploads/<?php echo $trip['filename']; ?>" alt="" width="200">
+                <p><?php echo $trip['description']; ?></p>
+            </div>
+            
             <div class="page-header">
                 <h2>Etapes</h2>
             </div>

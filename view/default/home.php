@@ -47,288 +47,63 @@
 
 <section id="sejours">
     <div class="thumbnail-container">
-        <div class="thumbnail">
-            <img src="assets/img/thumbs/01.jpg" alt="">
-            <div class="caption">
-                <h3>Hawaï Break
-                    <span class="quality">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius.</p>
-                <div class="clearfix">
-                    <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                    <a href="#" class="btn btn-link" role="button">Voir le programme</a>
-                    <span class="price"><small>à partir de </small>1489€</span>
-                </div>
-                <div class="formula">
-                    <ul>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-smile-o fa-stack-1x"></i>
-                            </span>
-                            Famille
-                            <span class="price pull-right">1805€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-heart fa-stack-1x"></i>
-                            </span>
-                            Couple
-                            <span class="price pull-right">1768€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-male fa-stack-1x"></i>
-                                <i class="fa fa-female fa-stack-1x"></i>
-                            </span>
-                            Solo
-                            <span class="price psull-right">1649€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-group fa-stack-1x"></i>
-                            </span>
-                            Groupe
-                            <span class="price pull-right">1649€</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="thumbnail">
-            <img src="assets/img/thumbs/02.jpg" alt="">
-            <div class="caption">
-                <h3 class="title-header">Tahiti Sunset
-                    <span class="quality">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                <div>
-                    <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                    <a href="#" class="btn btn-link" role="button">Voir le programme</a>
-                    <span class="price"><small>à partir de </small>1649€</span>
-                </div>
-                <div class="formula">
-                    <ul>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-smile-o fa-stack-1x"></i>
-                            </span>
-                            Famille
-                            <span class="price pull-right">1805€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-heart fa-stack-1x"></i>
-                            </span>
-                            Couple
-                            <span class="price pull-right">1768€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-male fa-stack-1x"></i>
-                                <i class="fa fa-female fa-stack-1x"></i>
-                            </span>
-                            Solo
-                            <span class="price psull-right">1649€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-group fa-stack-1x"></i>
-                            </span>
-                            Groupe
-                            <span class="price pull-right">1649€</span>
-                        </li>
-                    </ul>
+        <?php foreach ($trips as $trip): ?>
+            <div class="thumbnail">
+                <img src="/uploads/<?php echo $trip['filename']; ?>" alt="">
+                <div class="caption">
+                    <h3><?php echo $trip['name']; ?>
+                        <span class="quality">
+                            <?php for ($i = 1; $i < $trip['quality']; $i++): ?>
+                            <i class="fa fa-star"></i>
+                            <?php endfor;?>
+                        </span>
+                    </h3>
+                    <p><?php echo nl2br($trip['description']); ?></p>
+                    <div class="clearfix">
+                        <a href="#" class="btn btn-primary" role="button">Reserver</a>
+                        <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                        <span class="price"><small>à partir de </small>1489€</span>
+                    </div>
+                    <div class="formula">
+                        <ul>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-smile-o fa-stack-1x"></i>
+                                </span>
+                                Famille
+                                <span class="price pull-right">1805€</span>
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-heart fa-stack-1x"></i>
+                                </span>
+                                Couple
+                                <span class="price pull-right">1768€</span>
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-male fa-stack-1x"></i>
+                                    <i class="fa fa-female fa-stack-1x"></i>
+                                </span>
+                                Solo
+                                <span class="price psull-right">1649€</span>
+                            </li>
+                            <li>
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-group fa-stack-1x"></i>
+                                </span>
+                                Groupe
+                                <span class="price pull-right">1649€</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="thumbnail">
-            <img src="assets/img/thumbs/03.jpg" alt="">
-            <div class="caption">
-                <h3 class="title-header">Canaries Tour
-                    <span class="quality">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                <div>
-                    <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                    <a href="#" class="btn btn-link" role="button">Voir le programme</a>
-                    <span class="price"><small>à partir de </small>749€</span>
-                </div>
-                <div class="formula">
-                    <ul>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-smile-o fa-stack-1x"></i>
-                            </span>
-                            Famille
-                            <span class="price pull-right">1805€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-heart fa-stack-1x"></i>
-                            </span>
-                            Couple
-                            <span class="price pull-right">1768€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-male fa-stack-1x"></i>
-                                <i class="fa fa-female fa-stack-1x"></i>
-                            </span>
-                            Solo
-                            <span class="price psull-right">1649€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-group fa-stack-1x"></i>
-                            </span>
-                            Groupe
-                            <span class="price pull-right">1649€</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="thumbnail">
-            <img src="assets/img/thumbs/05.jpg" alt="">
-            <div class="caption">
-                <h3 class="title-header">Maldives
-                    <span class="quality">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                <div>
-                    <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                    <a href="#" class="btn btn-link" role="button">Voir le programme</a>
-                    <span class="price"><small>à partir de </small>917€</span>
-                </div>
-                <div class="formula">
-                    <ul>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-smile-o fa-stack-1x"></i>
-                            </span>
-                            Famille
-                            <span class="price pull-right">1805€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-heart fa-stack-1x"></i>
-                            </span>
-                            Couple
-                            <span class="price pull-right">1768€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-male fa-stack-1x"></i>
-                                <i class="fa fa-female fa-stack-1x"></i>
-                            </span>
-                            Solo
-                            <span class="price psull-right">1649€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-group fa-stack-1x"></i>
-                            </span>
-                            Groupe
-                            <span class="price pull-right">1649€</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="thumbnail">
-            <img src="assets/img/thumbs/04.jpg" alt="">
-            <div class="caption">
-                <h3 class="title-header">Guadeloupe
-                    <span class="quality">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem elit, ultricies sed ullamcorper eget, hendrerit eget nisl. Ut nisi lectus, blandit vitae augue eu, mattis varius</p>
-                <div>
-                    <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                    <a href="#" class="btn btn-link" role="button">Voir le programme</a>
-                    <span class="price"><small>à partir de </small>839€</span>
-                </div>
-                <div class="formula">
-                    <ul>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-smile-o fa-stack-1x"></i>
-                            </span>
-                            Famille
-                            <span class="price pull-right">1805€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-heart fa-stack-1x"></i>
-                            </span>
-                            Couple
-                            <span class="price pull-right">1768€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-male fa-stack-1x"></i>
-                                <i class="fa fa-female fa-stack-1x"></i>
-                            </span>
-                            Solo
-                            <span class="price psull-right">1649€</span>
-                        </li>
-                        <li>
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-square-o fa-stack-2x"></i>
-                                <i class="fa fa-group fa-stack-1x"></i>
-                            </span>
-                            Groupe
-                            <span class="price pull-right">1649€</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 

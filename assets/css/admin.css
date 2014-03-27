@@ -43,3 +43,9 @@ body {
     margin-top: 20px;
     margin-left: 10px; 
 }
+
+/* Images
+===========================================================*/
+.img-thumbnail.pull-left {
+    margin: 0 10px 10px 0;
+}
