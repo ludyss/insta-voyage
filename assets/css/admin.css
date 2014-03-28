@@ -49,3 +49,10 @@ body {
 .img-thumbnail.pull-left {
     margin: 0 10px 10px 0;
 }
+/* Logo
+===========================================================*/
+.logo-txt{
+    font-family: 'volkhovbold_italic', serif;
+    font-weight: bold;
+    font-style: italic;
+}
