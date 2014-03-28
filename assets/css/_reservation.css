@@ -25,17 +25,17 @@ section#section-reserve-img{
 }
 /* Image cover
 ===========================================================*/
-.cover-img{
+#cover-img{
     height: 100%;
     width: 250px;
     overflow: hidden;
     transition: width ease-in-out .3s;
     background-color: #cccccc;
 }
-.cover-img:hover, .cover-img.click{
+#cover-img:hover, #cover-img.click{
     width: 550px;
 }
-.cover-img > img{
+#cover-img > img{
     height: 100%;
     width: auto;
     margin: 0 0 0 -30%;
@@ -46,6 +46,8 @@ section#section-reserve-img{
     color: #ffab00;
     clear: left;
 }
-/* Choose type
+/* Btn inver type
 ===========================================================*/
-.choose-formula-box{}
+.btn-link.inverse{
+    color:#fff;
+}

@@ -1,5 +1,5 @@
 <section id="section-reserve-img">
-    <div class="cover-img">
+    <div id="cover-img">
         <img src="/uploads/<?php echo $trip['filename']; ?>" alt="">
     </div>
 </section>
@@ -61,6 +61,8 @@
             </div>
         </div>
         <div class="col-md-12">
+            
+            <pre><?php var_dump($formulas_list); ?></pre>
             <button type="button" class="btn btn-link pull-right" id="nextstep">Suivant <i class="fa fa-chevron-circle-right"></i></button>
         </div>
     </div>
@@ -96,7 +98,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="email">
+                    <input type="email" class="form-control" name="email" id="emailReserv" placeholder="email">
                 </div>
             </div>
             <div class="col-md-12">
@@ -110,13 +112,13 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="pays">Pays </label>
-                    <input type="text" class="form-control" id="pays" placeholder="Pays">
+                    <input type="text" class="form-control" id="pays" name="pays" placeholder="Pays">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="ville">Ville</label>
-                    <input type="text" class="form-control" id="ville" placeholder="Ville">
+                    <input type="text" class="form-control" name="ville" id="ville" placeholder="Ville">
                 </div>
             </div>
             <div class="col-md-12">
@@ -124,31 +126,32 @@
                     <div class="col-md-2">
                         <div class="form-group">
                             <label for="numrue">Numéro</label>
-                            <input type="text" class="form-control" id="num_rue" placeholder="01">
+                            <input type="text" class="form-control" name="num_rue" id="num_rue" placeholder="01">
                         </div>
                     </div>
                     <div class="col-md-offset-1 col-md-9">
                         <div class="form-group">
                             <label for="rue">Rue</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Nom de rue">
+                            <input type="text" class="form-control" name="nom_rue" id="rue" placeholder="Nom de rue">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="email">Code Postal</label>
-                    <input type="text" class="form-control" id="nom" placeholder="">
+                    <label for="code_postal">Code Postal</label>
+                    <input type="text" class="form-control" name="code_postal" id="code_postal" placeholder="">
                 </div>
             </div>
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-default pull-right">Réserver !</button>
-            </div>
+        </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-link inverse pull-left" id="backstep"> <i class="fa fa-chevron-circle-left"></i> Précédent</button>
+            <button type="submit" class="btn btn-default pull-right">Réserver !</button>
         </div>
     </form>
 </section>
 <section id="section-reserve-recap">
-        <div class="row">
+    <div class="row">
         <div class="col-md-12">
             <h1 class="title-header"><small id="formulechoosen">&nbsp; </small><br />
                 Récapitulatif
