@@ -3,19 +3,29 @@
 require_once './model/BaseModel.php';
 
 /**
- * Description of TripModel
+ * Description of FormulaModel
  *
  */
 class FormulaModel extends BaseModel {
 
-    public function findTripFormula($id) {
+    /**
+     * 
+     * @param int $id
+     * @return array
+     */
+    public function findByTripId($id)
+    {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
-        $sql = 'SELECT * FROM `formula` WHERE id_trip = :id_trip';
+
+        $sql = 'SELECT * FROM ' . $this->table . ' WHERE id_trip = :id_trip';
+
         $query = $this->db->prepare($sql);
         $query->execute(array(':id_trip' => $id));
-        return $query->fetchAll();
+        $formulas = $query->fetchAll();
+
+        return $formulas;
     }
 
 }
