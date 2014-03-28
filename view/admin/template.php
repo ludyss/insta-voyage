@@ -39,9 +39,9 @@
                     <ul class="nav navbar-nav">
                         <li class=""><a href="/admin"><i class="fa fa-home"></i></a></li>
                         <li class=""><a href="/admin/sejours">Séjours</a></li>
-                        <li class=""><a href="/admin/etapes">Etapes</a></li>
+                        <li class=""><a href="/admin/formules">Formules</a></li>
                         <li class=""><a href="/admin/clients">Clients</a></li>
-                        <li class=""><a href="/admin/reservations">Reservation</a></li>
+                        <li class=""><a href="/admin/reservations">Réservation</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class=""><a href="/admin/deconnexion"><i class="fa fa-sign-out"></i></a></li>

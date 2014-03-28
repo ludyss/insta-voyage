@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
-    var navState = 0;
 
     /*! 
      * Full screen section
@@ -98,7 +97,7 @@ jQuery(document).ready(function($) {
                 scrollLeft: $(target).offset().left
             }, 300);
         } else {
-            var navbar = "<ul class='nav navbar-nav animated slideInDown'><li><a href='./'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
+            var navbar = "<ul class='nav navbar-nav animated slideInDown'><li><a href='/'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
             $.ajax({
                 method: 'post',
                 url: target,
@@ -112,5 +111,9 @@ jQuery(document).ready(function($) {
             });
         }
         event.preventDefault();
+    });
+    $('input:radio[name=formulType]').click(function() {
+        alert(this.value);
+        $('#typeFormule').value = this.value;
     });
 });

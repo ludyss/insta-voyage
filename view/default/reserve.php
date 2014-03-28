@@ -25,7 +25,7 @@
                     <i class="fa fa-smile-o fa-stack-1x"></i>
                 </span>
                 <p>
-                    <input type="radio" name="formulType" /> Famille
+                    <input type="radio" name="formulType" value="famille"/> Famille
                     <span class="price pull-right">1805€</span>
                 </p>
             </div>
@@ -35,7 +35,7 @@
                     <i class="fa fa-heart fa-stack-1x"></i>
                 </span>
                 <p>
-                    <input type="radio" name="formulType"/> Couple
+                    <input type="radio" name="formulType" value="couple"/> Couple
                     <span class="price pull-right">1768€</span>
                 </p>
             </div>
@@ -45,7 +45,7 @@
                     <i class="fa fa-male fa-stack-1x"></i>
                 </span>
                 <p>
-                    <input type="radio" name="formulType"/> Solo
+                    <input type="radio" name="formulType" value="solo"/> Solo
                     <span class="price psull-right">1649€</span>
                 </p>
             </div>
@@ -55,17 +55,17 @@
                     <i class="fa fa-group fa-stack-1x"></i>
                 </span>
                 <p>
-                    <input type="radio" name="formulType"/> Groupe
+                    <input type="radio" name="formulType" value="groupe"/> Groupe
                     <span class="price pull-right">1649€</span>
                 </p>
             </div>
         </div>
         <div class="col-md-12">
-            <button type="button" class="btn btn-link pull-right">Suivant <i class="fa fa-chevron-circle-right"></i></button>
+            <button type="button" class="btn btn-link pull-right" id="nextstep">Suivant <i class="fa fa-chevron-circle-right"></i></button>
         </div>
     </div>
 </section>
-<section class="inverse" id="section-reserve-formules">
+<section class="inverse form-horizontal" id="section-reserve-formules">
     <div class="row">
         <div class="col-md-12">
             <h1 class="title-header"><small id="formulechoosen">&nbsp; </small><br />
@@ -78,30 +78,31 @@
             <p>Pour une réserver, veuillez fournir les informations nécessaire.</p>
         </div>
     </div>
-    <form class="form-horizontal" role="form" id="contactForm">
+    <form class="form-horizontal" role="form" id="reservationForm" method="post">
+        <input type="hidden" name="typeFormule" id="typeFormule" />
         <div class="col-md-6">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="nom">Nom </label>
-                    <input type="text" class="form-control" id="nom" placeholder="Nom">
+                    <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" id="prenom" placeholder="Prénom">
+                    <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="email">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="email">Téléphone</label>
-                    <input type="text" class="form-control" id="telephone" placeholder="0123456789">
+                    <input type="text" class="form-control" name="telephone" id="telephone" placeholder="0123456789">
                 </div>
             </div>
         </div>
@@ -128,8 +129,8 @@
                     </div>
                     <div class="col-md-offset-1 col-md-9">
                         <div class="form-group">
-                            <label for="email">Rue</label>
-                            <input type="email" class="form-control" id="nom" placeholder="email">
+                            <label for="rue">Rue</label>
+                            <input type="text" class="form-control" id="nom" placeholder="Nom de rue">
                         </div>
                     </div>
                 </div>
@@ -141,7 +142,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <button type="button" class="btn btn-default pull-right">Réserver !</button>
+                <button type="submit" class="btn btn-default pull-right">Réserver !</button>
             </div>
         </div>
     </form>

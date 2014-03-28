@@ -4,6 +4,7 @@ require_once './controller/BaseController.php';
 require_once './model/TripModel.php';
 require_once './model/StepModel.php';
 require_once './model/PictureModel.php';
+require_once './model/ClientModel.php';
 
 /**
  * Description of TripController
@@ -111,10 +112,15 @@ class TripController extends BaseController
     public function reserveAction($id) {
         $trip_model = new TripModel('trip', 'id_trip');
         $trip = $trip_model->findByIdWithPicture($id);
-        $step_model = new StepModel('trip_step', 'id_trip_step');
-        $steps = $step_model->findByTripIdWithPicture($id);
         //echo " sejour $id";
         $view = './view/default/reserve.php';
         include './view/template.php';
+    }
+    
+    public function setreservationAction($id) {
+        $client_model = new ClientModel('client', 'id_client');
+        var_dump($client_model->generatePassword());
+        var_dump($id);
+        var_dump($_POST);
     }
 }

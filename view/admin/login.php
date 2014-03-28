@@ -2,7 +2,7 @@
     <form id="login-form" class="jumbotron" method="post">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
-                <h1 class="animated fadeInRight"><img src="/assets/img/logo/logo_64.png" alt=""><span>Cross<span> Island</span></h1>
+                <h1 class="animated fadeInRight"><img src="/assets/img/logo/logo_64.png" alt=""><span class="logo-txt">Cross Island</span></h1>
             </div>
         </div>
         <div class="row">
