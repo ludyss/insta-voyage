@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
-    var navState = 0;
 
     /*! 
      * Full screen section
@@ -93,14 +92,14 @@ jQuery(document).ready(function($) {
      */
     $('.navbar-nav a').click(function(event) {
         var target = $(this).attr('href');
-        if (target[0] === '#') {
+        if (target[0] === '#' && target != undefined) {
             $("html, body").stop().animate({
                 scrollLeft: $(target).offset().left
             }, 300);
         } else {
-            var navbar = "<ul class='nav navbar-nav'><li><a href='./'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
+            var navbar = "<ul class='nav navbar-nav animated slideInDown'><li><a href='/'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
             $.ajax({
-                method: 'get',
+                method: 'post',
                 url: target,
                 success: function(response) {
                     $("#navbar-collapse").html(navbar);
@@ -112,5 +111,21 @@ jQuery(document).ready(function($) {
             });
         }
         event.preventDefault();
+    });
+    $('input:radio[name=formulType]').click(function() {
+        $('#typeFormule').value = this.value;
+    });
+    $('#nextstep').click(function() {
+        $("html, body").stop().animate({
+            scrollLeft: $("#section-reserve-formules").offset().left
+        }, 300);
+    });
+    $('#backstep').click(function() {
+        $("html, body").stop().animate({
+            scrollLeft: $("#section-reserve-img").offset().left
+        }, 300);
+    });
+    $('#section-reserve-img').click(function() {
+        $('#cover-img').toggleClass('click');
     });
 });

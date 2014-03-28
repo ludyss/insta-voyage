@@ -15,11 +15,7 @@ class FormulaController extends BaseController
      */
     public function indexAction()
     {
-        $formula_model = new FormulaModel('formula', 'id_formula');
-        $formules = $formula_model->findAll();
 
-        $view = './view/formula/index.php';
-        include './view/admin/template.php';
     }
 
     /**
@@ -27,8 +23,7 @@ class FormulaController extends BaseController
      */
     public function createAction()
     {
-        $view = './view/formula/create.php';
-        include './view/admin/template.php';
+
     }
 
     /**
@@ -38,14 +33,16 @@ class FormulaController extends BaseController
     {
         $formule = array(
             'formula_type' => $this->inputPost('type'),
-            'nb_place_formula' => $this->inputPost('place'),
             'formula_price' => $this->inputPost('price'),
-            'id_trip' => $this->inputPost('trip'),
+            'nb_child' => $this->inputPost('nb_child'),
+            'nb_adult' => $this->inputPost('nb_adult'),
+            'id_trip' => $this->inputPost('id_trip')
         );
+        
         $formule_model = new FormulaModel('formula', 'id_formula');
         $id = $formule_model->insert($formule);
-        //echo ' Yeah ! Tu as soumis le formilaire :D ';
-        $this->redirect('/admin/formules');
+        
+        $this->redirect('/admin/sejours/' . $formule['id_trip']);
     }
 
     /**
@@ -60,24 +57,24 @@ class FormulaController extends BaseController
         include './view/admin/template.php';
     }
 
-
     /**
      * 
      */
     public function updateAction()
     {
         $formule = array(
-            'id_formula' => $this->inputPost('id'),
+            'id_formula' => $this->inputPost('id_formula'),
             'formula_type' => $this->inputPost('type'),
-            'nb_place_formula' => $this->inputPost('place'),
             'formula_price' => $this->inputPost('price'),
-            'id_trip' => $this->inputPost('trip'),
+            'nb_child' => $this->inputPost('nb_child'),
+            'nb_adult' => $this->inputPost('nb_adult'),
+            'id_trip' => $this->inputPost('id_trip')
         );
 
         $trip_model = new FormulaModel('formula', 'id_formula');
         $trip_model->update($formule);
 
-        $this->redirect('/admin/formules');
+        $this->redirect('/admin/sejours/' . $formule['id_trip']);
     }
 
     /**
@@ -85,10 +82,11 @@ class FormulaController extends BaseController
      */
     public function deleteAction($id)
     {
-        $trip_model = new FormulaModel('formula', 'id_formula');
-        $trip_model->deleteById($id);
+        $formula_model = new FormulaModel('formula', 'id_formula');
+        $formula = $formula_model->findById($id);
+        $formula_model->deleteById($id);
 
-        $this->redirect('/admin/formules');
+        $this->redirect('/admin/sejours/' . $formula['id_trip']);
     }
 
 }

@@ -6,16 +6,14 @@ require_once './model/BaseModel.php';
  * Description of TripModel
  *
  */
-class TripModel extends BaseModel
-{
+class TripModel extends BaseModel {
 
     /**
      * 
      * @param int $id
      * @return array
      */
-    public function findAllWithPicture()
-    {
+    public function findAllWithPicture() {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
@@ -29,14 +27,13 @@ class TripModel extends BaseModel
 
         return $trips;
     }
-    
+
     /**
      * 
      * @param int $id
      * @return array
      */
-    public function findByIdWithPicture($id)
-    {
+    public function findByIdWithPicture($id) {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
