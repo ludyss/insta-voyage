@@ -13,8 +13,7 @@ class FormulaModel extends BaseModel {
      * @param int $id
      * @return array
      */
-    public function findByTripId($id)
-    {
+    public function findByTripId($id) {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
@@ -26,6 +25,16 @@ class FormulaModel extends BaseModel {
         $formulas = $query->fetchAll();
 
         return $formulas;
+    }
+
+    public function findTripFormula($id) {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+        $sql = 'SELECT * FROM `formula` WHERE id_trip = :id_trip';
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id_trip' => $id));
+        return $query->fetchAll();
     }
 
 }

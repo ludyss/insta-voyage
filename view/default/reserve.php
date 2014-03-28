@@ -12,14 +12,41 @@
         </h1>
         <div class="quality-right">
             <?php for ($i = 0; $i < $trip['quality']; $i++): ?>
-                <i class="fa fa-star"></i>
+                <i class="fa fa-star fa-4x"></i>
             <?php endfor; ?>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <h3>Choisissez le type souhaité </h3>
             </div>
-            <div class="col-md-3 text-center choose-formula-box">
+            <?php foreach ($formulas_list as $formules) : ?>
+                <div class="col-md-3 text-center choose-formula-box">
+                <?php 
+                switch ($formules['formula_type']) {
+                    case 'famille':
+                        echo '<span class="fa-stack fa-lg fa-4x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-smile-o fa-stack-1x"></i></span>';
+                        break;
+                    case 'couple':
+                        echo '<span class="fa-stack fa-lg fa-4x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-heart fa-stack-1x"></i></span>';
+                        break;
+                    case 'solo':
+                        echo '<span class="fa-stack fa-lg fa-4x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-male fa-stack-1x"></i></span>';
+                        break;
+                    case 'groupe':
+                        echo '<span class="fa-stack fa-lg fa-4x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-group fa-stack-1x"></i></span>';
+                        break;
+                    default:
+                        echo '<span class="fa-stack fa-lg fa-4x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-info fa-stack-1x"></i></span>';
+                        break;
+                }
+                ?>
+                    <p>
+                        <input type="radio" name="formulType" value="<?php echo $formules['id_formula'];?>"/> <?php echo ucfirst($formules['formula_type']);?>
+                        <span class="price pull-right"><?php echo$formules['formula_price'];?>€</span>
+                    </p>
+                </div>
+            <?php endforeach; ?>
+            <!--div class="col-md-3 text-center choose-formula-box">
                 <span class="fa-stack fa-lg fa-4x">
                     <i class="fa fa-square-o fa-stack-2x"></i>
                     <i class="fa fa-smile-o fa-stack-1x"></i>
@@ -59,10 +86,8 @@
                     <span class="price pull-right">1649€</span>
                 </p>
             </div>
-        </div>
+        </div-->
         <div class="col-md-12">
-            
-            <pre><?php var_dump($formulas_list); ?></pre>
             <button type="button" class="btn btn-link pull-right" id="nextstep">Suivant <i class="fa fa-chevron-circle-right"></i></button>
         </div>
     </div>
