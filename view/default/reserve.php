@@ -1,19 +1,19 @@
 <section id="section-reserve-img">
     <div class="cover-img">
-        <img src="/assets/img/ressources/IMG4.png" alt="">
+        <img src="/uploads/<?php echo $trip['filename']; ?>" alt="">
     </div>
 </section>
 <section id="section-reserve-desc">
     <div class="choose-formula">
         <h1 class="title-header">
             <div class="pull-right"><small class="text-right">à partir de 1489€</small></div>
-            <small>Reservervation pour : </small>
-            <br />Hawaï Break
+            <small>Réservation pour : </small>
+            <br /><?php echo $trip['name']; ?>
         </h1>
         <div class="quality-right">
-            <i class="fa fa-star fa-3x"></i>
-            <i class="fa fa-star fa-3x"></i>
-            <i class="fa fa-star fa-3x"></i>
+            <?php for ($i = 0; $i < $trip['quality']; $i++): ?>
+                <i class="fa fa-star"></i>
+            <?php endfor; ?>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -60,9 +60,12 @@
                 </p>
             </div>
         </div>
+        <div class="col-md-12">
+            <button type="button" class="btn btn-link pull-right">Suivant <i class="fa fa-chevron-circle-right"></i></button>
+        </div>
     </div>
 </section>
-<section id="section-reserve-formules">
+<section class="inverse" id="section-reserve-formules">
     <div class="row">
         <div class="col-md-12">
             <h1 class="title-header"><small id="formulechoosen">&nbsp; </small><br />
@@ -86,19 +89,69 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Prénom">
+                    <input type="text" class="form-control" id="prenom" placeholder="Prénom">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="nom" placeholder="email">
+                    <input type="email" class="form-control" id="email" placeholder="email">
                 </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="email">Téléphone</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="0123456789">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="pays">Pays </label>
+                    <input type="text" class="form-control" id="pays" placeholder="Pays">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="ville">Ville</label>
+                    <input type="text" class="form-control" id="ville" placeholder="Ville">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="numrue">Numéro</label>
+                            <input type="text" class="form-control" id="num_rue" placeholder="01">
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-9">
+                        <div class="form-group">
+                            <label for="email">Rue</label>
+                            <input type="email" class="form-control" id="nom" placeholder="email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="email">Code Postal</label>
+                    <input type="text" class="form-control" id="nom" placeholder="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-default pull-right">Réserver !</button>
             </div>
         </div>
     </form>
 </section>
-<section id="section-reserve-info-user">
-</section>
 <section id="section-reserve-recap">
-</section-->
+        <div class="row">
+        <div class="col-md-12">
+            <h1 class="title-header"><small id="formulechoosen">&nbsp; </small><br />
+                Récapitulatif
+            </h1>
+        </div>
+    </div>
+</section>

@@ -37,7 +37,7 @@ class PictureController extends BaseController
             }
 
             if (!is_dir($upload_path)) {
-                mkdir('upload_path', 0700);
+                mkdir($upload_path, 0700);
             }
 
             $picture_model = new PictureModel('picture', 'id_picture');

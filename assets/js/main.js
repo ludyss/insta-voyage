@@ -93,14 +93,14 @@ jQuery(document).ready(function($) {
      */
     $('.navbar-nav a').click(function(event) {
         var target = $(this).attr('href');
-        if (target[0] === '#') {
+        if (target[0] === '#' && target != undefined) {
             $("html, body").stop().animate({
                 scrollLeft: $(target).offset().left
             }, 300);
         } else {
-            var navbar = "<ul class='nav navbar-nav'><li><a href='./'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
+            var navbar = "<ul class='nav navbar-nav animated slideInDown'><li><a href='./'><i class='fa fa-home'></i> </a></li><li><a href='#contact'>Contact</a></li></ul>";
             $.ajax({
-                method: 'get',
+                method: 'post',
                 url: target,
                 success: function(response) {
                     $("#navbar-collapse").html(navbar);

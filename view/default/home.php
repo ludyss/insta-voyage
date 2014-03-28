@@ -53,15 +53,15 @@
                 <div class="caption">
                     <h3><?php echo $trip['name']; ?>
                         <span class="quality">
-                            <?php for ($i = 1; $i < $trip['quality']; $i++): ?>
+                            <?php for ($i = 0; $i < $trip['quality']; $i++): ?>
                             <i class="fa fa-star"></i>
                             <?php endfor;?>
                         </span>
                     </h3>
                     <p><?php echo nl2br($trip['description']); ?></p>
-                    <div class="clearfix">
-                        <a href="#" class="btn btn-primary" role="button">Reserver</a>
-                        <a href="#" class="btn btn-link" role="button">Voir le programme</a>
+                    <div class="clearfix" id="trip-action">
+                        <a href="/sejour/<?php echo $trip['id_trip']; ?>/reserver" class="btn btn-primary" role="button">Reserver</a>
+                        <a href="/sejour/<?php echo $trip['id_trip']; ?>" class="btn btn-link" role="button">Voir le programme</a>
                         <span class="price"><small>à partir de </small>1489€</span>
                     </div>
                     <div class="formula">
@@ -110,26 +110,6 @@
 <section id="hotels" class="inverse">
     <div class="row">
         <div class="col-md-12">
-            <h1>À propos de Cross Island</h1>
-            <p>
-                Cross Island® est un site de voyage au parmis tant d'autre, il permet aux
-                voyageurs de réserver et d'obtenir le voyage de leur rêve. Cross Island
-                offre des Séjours fiables et propose une grande variété de choix de voyages.
-            </p>
-            <p>
-                Cross Island comprend également Cross Island for Business,
-                une division dédiée aux entreprises de l’industrie du tourisme permettant
-                aux professionnels d’accéder aux offres spéciales pour entreprise et PME.
-            </p>
-            <h2>Nos Partenaires :</h2>
-            <address>www.airfarewatchdog.com, www.bookingbuddy.com, www.cruisecritic.com,
-                www.everytrail.com, www.familyvacationcritic.com, www.flipkey.com,
-                www.gateguru.com, www.holidaylettings.co.uk, www.holidaywatchdog.com,
-                www.independenttraveler.com, www.jetsetter.com, www.niumba.com,
-                www.onetime.com, www.oyster.com, www.seatguru.com, www.smartertravel.com,
-                www.tingo.com, www.travelpod.com, www.virtualtourist.com, www.whereivebeen.com et
-                www.kuxun.cn.
-            </address>
         </div>
     </div>
 </section>

@@ -109,6 +109,10 @@ class TripController extends BaseController
     }
 
     public function reserveAction($id) {
+        $trip_model = new TripModel('trip', 'id_trip');
+        $trip = $trip_model->findByIdWithPicture($id);
+        $step_model = new StepModel('trip_step', 'id_trip_step');
+        $steps = $step_model->findByTripIdWithPicture($id);
         //echo " sejour $id";
         $view = './view/default/reserve.php';
         include './view/template.php';

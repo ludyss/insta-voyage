@@ -127,7 +127,7 @@ class Router
                 return $route;
             }
         }
-
+        include './404.html';
         throw new \RuntimeException('No route matching the request');
     }
 
@@ -172,10 +172,12 @@ class Router
                 return call_user_func_array(array($controller, $action_name), $route->getValues());
                 
             } else {
+                include './404.html';
                 throw new \RuntimeException($action_name . ' action not found in ' . $controller_name . ' controller class');
             }
             
         } else {
+            include './404.html';
             throw new \RuntimeException($controller_name . ' class file not found');
         }
     }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routes>
     <route pattern="/" controller="default" action="index" methods="get"/>
-    <route pattern="/contact" controller="default" action="contact" methods="get"/>
+    <route pattern="/contact" controller="default" action="contact" methods="post"/>
     <route pattern="/video" controller="video" action="getVideoList" methods="post"/>
-    <route pattern="/admin" controller="admin" action="index" methods="get"/>
     
     <!--<route pattern="/programme/(\d+)" controller="trip" action="show" params="id"/>-->
-    <route pattern="/sejours/(\d+)" controller="default" action="program"  params="id" methods="get"/>
-    <route pattern="/sejours/(\d+)/reserver" controller="trip" action="reserve" params="id"  methods="get"/>
+    <route pattern="/sejour/(\d+)" controller="default" action="program"  params="id" methods="get"/>
+    <route pattern="/sejour/(\d+)/reserver" controller="trip" action="reserve" params="id"  methods="get"/>
             
+    <route pattern="/admin" controller="admin" action="index" methods="get"/>
     <route pattern="/admin/sejours" controller="trip" action="index"  methods="get"/>
     <route pattern="/admin/sejours/nouveau" controller="trip" action="create" methods="get"/>
     <route pattern="/admin/sejours/ajouter" controller="trip" action="add" methods="post"/>
