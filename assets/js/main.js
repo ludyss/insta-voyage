@@ -113,7 +113,19 @@ jQuery(document).ready(function($) {
         event.preventDefault();
     });
     $('input:radio[name=formulType]').click(function() {
-        alert(this.value);
         $('#typeFormule').value = this.value;
+    });
+    $('#nextstep').click(function() {
+        $("html, body").stop().animate({
+            scrollLeft: $("#section-reserve-formules").offset().left
+        }, 300);
+    });
+    $('#backstep').click(function() {
+        $("html, body").stop().animate({
+            scrollLeft: $("#section-reserve-img").offset().left
+        }, 300);
+    });
+    $('#section-reserve-img').click(function() {
+        $('#cover-img').toggleClass('click');
     });
 });

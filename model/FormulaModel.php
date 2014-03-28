@@ -6,8 +6,7 @@ require_once './model/BaseModel.php';
  * Description of FormulaModel
  *
  */
-class FormulaModel extends BaseModel
-{
+class FormulaModel extends BaseModel {
 
     /**
      * 
