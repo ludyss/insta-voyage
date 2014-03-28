@@ -16,7 +16,7 @@
             <h2 class="title-header">Contact</h2>
         </div>
         <div class="col-md-6">
-            <i class="fa fa-map-marker fa-2x"></i>&nbsp; <br /> 7 Place de L'Iris<br />Immeuble Allende<br />92 800 Puteaux
+            <i class="fa fa-map-marker fa-2x"></i>&nbsp; 7 Place de L'Iris<br />Immeuble Allende<br />92 800 Puteaux
         </div>
         <div class="col-md-6">
             <i class="fa fa-phone fa-2x"></i>&nbsp; : 09 51 17 28 77
@@ -90,7 +90,8 @@
         </div>
     </div>
 </section>
-<section id="section-logo-picture"><H1><span class="logo-txt">Cross Island</span></H1>
+<section id="section-logo-picture">
+    <H1><span class="logo-txt">Cross Island</span></H1>
 </section>
 
 
