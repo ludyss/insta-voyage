@@ -1,37 +1,32 @@
 <?php
 
-require './model/BaseModel.php';
+require_once './model/BaseModel.php';
 
 /**
- * Description of TripModel
+ * Description of FormulaModel
  *
  */
 class FormulaModel extends BaseModel
 {
 
-    public function findAll(array $columns = array(), $offset = null, $limit = null)
+    /**
+     * 
+     * @param int $id
+     * @return array
+     */
+    public function findByTripId($id)
     {
         if (!$this->db instanceof \PDO) {
             $this->init();
         }
-        $sql = 'SELECT * FROM `formula`';
-        
+
+        $sql = 'SELECT * FROM ' . $this->table . ' WHERE id_trip = :id_trip';
+
         $query = $this->db->prepare($sql);
+        $query->execute(array(':id_trip' => $id));
+        $formulas = $query->fetchAll();
 
-        $query->execute();
-        return $query->fetchAll();
-    }
-
-    public function findById($id, array $columns = array())
-    {
-        if (!$this->db instanceof \PDO) {
-            $this->init();
-        }
-        $sql = 'SELECT * FROM `formula` WHERE `id_formula` = :id';
-        $query = $this->db->prepare($sql);
-
-        $query->execute(array(':id' => $id));
-        return $query->fetch();
+        return $formulas;
     }
 
 }

@@ -5,6 +5,7 @@ require_once './model/TripModel.php';
 require_once './model/StepModel.php';
 require_once './model/PictureModel.php';
 require_once './model/ClientModel.php';
+require_once './model/FormulaModel.php';
 
 /**
  * Description of TripController
@@ -60,6 +61,8 @@ class TripController extends BaseController
         $trip = $trip_model->findByIdWithPicture($id);
         $step_model = new StepModel('trip_step', 'id_trip_step');
         $steps = $step_model->findByTripId($id);
+        $formula_model = new FormulaModel('formula', 'id_formula');
+        $formules = $formula_model->findByTripId($id);
 
         $view = './view/trip/show.php';
         include './view/admin/template.php';

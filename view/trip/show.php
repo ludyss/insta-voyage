@@ -10,7 +10,7 @@
                 <img class="img-thumbnail pull-left" src="/uploads/<?php echo $trip['filename']; ?>" alt="" width="200">
                 <p><?php echo $trip['description']; ?></p>
             </div>
-            
+
             <div class="page-header">
                 <h2>Etapes</h2>
             </div>
@@ -80,6 +80,73 @@
                     </form>
                 </div>
             </div>
+
+            <div class="page-header">
+                <h2>Formules</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Nombre d'adultes</th>
+                            <th>Nombre d'enfants</th>
+                            <th>Prix</th>
+                            <th width="200">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($formules as $formule): ?>
+                            <tr>
+                                <td>
+                                    <a href="/admin/formules/<?php echo $formule['id_formula']; ?>"><?php echo $formule['formula_type']; ?></a>
+                                </td>
+                                <td><?php echo $formule['nb_adult']; ?></td>
+                                <td><?php echo $formule['nb_child']; ?></td></td>
+                                <td><?php echo $formule['formula_price']; ?></td></td>
+                                <td>
+                                    <a class="btn btn-warning" href="/admin/formules/<?php echo $formule['id_formula']; ?>/modifier"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-danger" href="/admin/formules/<?php echo $formule['id_formula']; ?>/supprimer"><i class="fa fa-trash-o"></i></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="well">
+                <div class="row">
+                    <form action="/admin/formules/ajouter" method="POST" accept-charset="UTF-8">
+                        <input type="hidden" id="formula-trip" name="id_trip" value="<?php echo $trip['id_trip']; ?>">
+                        <div class="form-group col-md-4">
+                            <label for="formula-type">Type de formule</label>
+                            <select id="formula-type" name="type" class="form-control">
+                                <option value="famille">Famille</option>
+                                <option value="couple">Couple</option>
+                                <option value="groupe">Groupe</option>
+                                <option value="solo">Solo</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="formula-nb-adult">Nombre d'adulte</label>
+                            <input id="formula-nb-adult" class="form-control" type="number" min="1" name="nb_adult">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="formula-nb-child">Nombre d'enfant</label>
+                            <input id="formula-nb-child" class="form-control" type="number" min="0" name="nb_child">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="formula-price">Prix</label>
+                            <input id="formula-price" class="form-control" type="number" min="1" max="5" placeholder="saisissez un prix" name="price" required="required">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <button class="btn btn-primary" type="submit">Ajouter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
