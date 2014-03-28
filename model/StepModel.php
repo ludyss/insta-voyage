@@ -38,9 +38,9 @@ class StepModel extends BaseModel
     /**
      * 
      * @param array $columns
-     * @param type $offset
-     * @param type $limit
-     * @return type
+     * @param int $offset
+     * @param int $limit
+     * @return array
      */
     public function findAll(array $columns = array(), $offset = 0, $limit = null)
     {
@@ -57,9 +57,9 @@ class StepModel extends BaseModel
 
     /**
      * 
-     * @param type $id
+     * @param int $id
      * @param array $columns
-     * @return type
+     * @return array
      */
     public function findById($id, array $columns = array())
     {
@@ -73,9 +73,8 @@ class StepModel extends BaseModel
 
     /**
      * 
-     * @param type $id
-     * @param array $columns
-     * @return type
+     * @param int $id
+     * @return array
      */
     public function findByIdWithPicture($id)
     {
@@ -83,8 +82,8 @@ class StepModel extends BaseModel
             $this->init();
         }
 
-        $sql = 'SELECT * FROM ' . $this->table
-                . ' JOIN picture on picture.id_picture = ' . $this->table . '.cover'
+        $sql = 'SELECT ' . $this->table . '.*, picture.filename FROM ' . $this->table
+                . ' LEFT JOIN picture on picture.id_picture = ' . $this->table . '.cover'
                 . ' WHERE ' . $this->table . '.' . $this->primary_key . ' = :id';
 
         $query = $this->db->prepare($sql);
@@ -95,6 +94,34 @@ class StepModel extends BaseModel
         $step['end_date'] = new \DateTime($step['end_date']);
 
         return $step;
+    }
+
+    /**
+     * 
+     * @param int $id
+     * @return array
+     */
+    public function findByTripIdWithPicture($id)
+    {
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
+        $sql = 'SELECT ' . $this->table . '.*, picture.filename FROM ' . $this->table
+                . ' LEFT JOIN picture on picture.id_picture = ' . $this->table . '.cover'
+                . ' LEFT JOIN trip on trip.id_trip = ' . $this->table . '.id_trip'
+                . ' WHERE ' . $this->table . '.' . $this->primary_key . ' = :id';
+
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':id' => $id));
+        $steps = $query->fetchAll();
+
+        foreach ($steps as $key => $step) {
+            $steps[$key]['begin_date'] = new \DateTime($step['begin_date']);
+            $steps[$key]['end_date'] = new \DateTime($step['end_date']);
+        }
+        
+        return $steps;
     }
 
 }

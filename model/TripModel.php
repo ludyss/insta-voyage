@@ -1,6 +1,6 @@
 <?php
 
-require './model/BaseModel.php';
+require_once './model/BaseModel.php';
 
 /**
  * Description of TripModel
@@ -9,35 +9,47 @@ require './model/BaseModel.php';
 class TripModel extends BaseModel
 {
 
-    public function findAll(array $columns = array(), $offset = null, $limit = null)
+    /**
+     * 
+     * @param int $id
+     * @return array
+     */
+    public function findAllWithPicture()
     {
-        $sql = 'SELECT * FROM `Trip`';
-        
-        
-        
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
+        $sql = 'SELECT * FROM ' . $this->table
+                . ' LEFT JOIN picture on picture.id_picture = ' . $this->table . '.cover';
+
         $query = $this->db->prepare($sql);
+        $query->execute();
+        $trips = $query->fetchAll();
 
-        $query->execute(array(':id' => $id));
-        return $query->fetch();
+        return $trips;
     }
-
-    public function findById($id, array $columns = array())
+    
+    /**
+     * 
+     * @param int $id
+     * @return array
+     */
+    public function findByIdWithPicture($id)
     {
-        $sql = 'SELECT * FROM `Trip` WHERE `id_trip` = :id';
+        if (!$this->db instanceof \PDO) {
+            $this->init();
+        }
+
+        $sql = 'SELECT * FROM ' . $this->table
+                . ' LEFT JOIN picture on picture.id_picture = ' . $this->table . '.cover'
+                . ' WHERE ' . $this->table . '.' . $this->primary_key . ' = :id';
+
         $query = $this->db->prepare($sql);
-
         $query->execute(array(':id' => $id));
-        return $query->fetch();
-    }
+        $trip = $query->fetch();
 
-    public function save(array $trip)
-    {
-        
-    }
-
-    public function deleteById($id, $hard = false)
-    {
-        
+        return $trip;
     }
 
 }

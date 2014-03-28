@@ -39,6 +39,19 @@
     height: 400px;
 }
 
+.thumbnail .caption p {
+    position: relative;
+    height: 80px;
+    overflow-y: hidden;
+}
+
+.thumbnail .caption p:after {
+    position: absolute;
+    content: '...';
+    background-color: #fff;
+    right: 0; bottom: 0;
+}
+
 .thumbnail .caption h3 {
     padding: 15px 0 10px 0;
     margin: 0 0 10px 0;

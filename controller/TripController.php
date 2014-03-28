@@ -3,6 +3,7 @@
 require_once './controller/BaseController.php';
 require_once './model/TripModel.php';
 require_once './model/StepModel.php';
+require_once './model/PictureModel.php';
 
 /**
  * Description of TripController
@@ -17,7 +18,7 @@ class TripController extends BaseController
     public function indexAction()
     {
         $trip_model = new TripModel('trip', 'id_trip');
-        $trips = $trip_model->findAll();
+        $trips = $trip_model->findAllWithPicture();
 
         $view = './view/trip/index.php';
         include './view/admin/template.php';
@@ -55,7 +56,7 @@ class TripController extends BaseController
     public function showAction($id)
     {
         $trip_model = new TripModel('trip', 'id_trip');
-        $trip = $trip_model->findById($id);
+        $trip = $trip_model->findByIdWithPicture($id);
         $step_model = new StepModel('trip_step', 'id_trip_step');
         $steps = $step_model->findByTripId($id);
 
@@ -70,6 +71,8 @@ class TripController extends BaseController
     {
         $trip_model = new TripModel('trip', 'id_trip');
         $trip = $trip_model->findById($id);
+        $picture_model = new PictureModel('picture', 'id_picture');
+        $pictures = $picture_model->findByTripId($id);
 
         $view = './view/trip/edit.php';
         include './view/admin/template.php';
@@ -85,6 +88,7 @@ class TripController extends BaseController
             'name' => $this->inputPost('name'),
             'quality' => $this->inputPost('quality'),
             'description' => $this->inputPost('description'),
+            'cover' => $this->inputPost('cover')
         );
 
         $trip_model = new TripModel('trip', 'id_trip');
@@ -104,4 +108,9 @@ class TripController extends BaseController
         $this->redirect('/admin/sejours');
     }
 
+    public function reserveAction($id) {
+        //echo " sejour $id";
+        $view = './view/default/reserve.php';
+        include './view/template.php';
+    }
 }
